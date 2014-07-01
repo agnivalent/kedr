@@ -1,24 +1,49 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset=utf-8"/>
         <title>ОАО КБ «Кедр» — Вклады в банк до 10,28%</title>
     </head>
     <body>
         <header>
-            <nav>
-                <ul>
-                    <li><a href="#calculator">Калькулятор вкладов</a></li>
-                    <li><a href="#info">О нас</a></li>
-                    <li><a href="#offices">Отделения</a></li>
-                    <li><a href="#feedback">Контакты</a></li>
-                </ul>
-            </nav>
+            <nav><a href="#calculator">Калькулятор вкладов</a> | <a href="#info">О нас</a> |                            <a href="#offices">Отделения</a> | <a href="#feedback">Контакты</a></nav>
         </header>
         <section id="calculator">
             <a name="calculator"></a>
             <h2>Вклады в Банк «Кедр» до 10,28%</h2>
-
+            <h3>Капитализация процентов. Вклады застрахованы государством.</h3>
+            <form action="/echo" method="post">
+            <label for="area-field">Я хочу вложить <br> на срок</label>
+            <textarea name="area-info" id="area-field" rows="1" cols="10"></textarea>
+            <br>
+            <select>
+                <option>2 месяца</option>
+                <option>3 месяца</option>
+                <option>6 месяцев</option>
+                <option>1 год</option>
+                <option selected>1,5 года</option>
+                <option>2 года</option>            
+                </select>
+                <br>
+            <input type="checkbox" name="part" id="part" checked>
+            <label for="part">Частичное снятие средств без потери процента</label>
+          <br>
+            <input type="checkbox" name="monthly" id="monthly" checked>
+            <label for="monthly">Ежемесячное пополнение вклада</label> 
+            <br>
+            <label for="area-field">Хочу пополнять на</label>
+            <br>
+            <textarea name="area-info" id="area-field" rows="1" cols="10"></textarea>                      <p>Доход</p>
+                <input type="radio" name="income" id="deposit" value="deposit">
+                <label for id="deposit"> Накапливать на депозите, увеличивая % годовых </label>
+                <br>
+                <input type="radio" name="income" id="month" value="month" checked>
+                <label for id="month"> Ежемесячно переводить на текущий счёт</label>
+                <br>
+                <input type="button" value="Посетить наши офисы">
+            
+        </form>
+        
         </section>
         <section id="info">
             <a name="info"></a>
@@ -26,10 +51,41 @@
         <section id="deposit-info">
         </section>
         <section id="offices">
-            <a name="offices"></a>
+        <a name="offices"></a>
+        <h2>68 отделений Банка в Красноярском крае</h2>
+        <form action="/echo" method="post">
+        <select>
+                <option selected>Красноярск</option>
+                <option>Ачинск</option>
+                <option>Боготол</option>
+                <option>Богучаны</option>
+                <option>Бородино</option>
+                <option>Дивногорск</option> 
+                <option>Енисейск</option>
+                <option>Железногорск</option>
+                <option>Заозерный</option>
+                <option>Зеленогорск</option>
+                <option>Иланский</option>
+                <option>Канск</option> 
+                <option>Кодинск</option>
+                <option>Козулька</option>
+                <option>Лесосибирск</option>
+                <option>Минусинск</option>
+                <option>Назарово</option>
+                <option>Нижний Ингаш</option>
+                <option>Норильск</option>
+                <option>Саянский</option>
+                <option>Ужур</option>
+                <option>Уяр</option>
+                <option>Черногорск</option>
+                <option>Шарыпово</option>           
+                     </select>
+                        </form>
         </section>
         <section id="feedback">
+        
             <a name="feedback"></a>
+            <div id="header_phone" class="hphone">8 800 2000-946</div>
         </section>
         <footer>
         </footer>
