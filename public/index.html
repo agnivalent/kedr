@@ -2,113 +2,47 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <title>ОАО КБ «Кедр» — Вклады в банк до 10,28%</title>
-        <style type="text/css">
-   html, body {
-    background:#F5F5F5;
-	margin:30px;
-	padding:20px;
-	font-family:Arial, sans-serif;
-    font-size:14px;
-    line-height:1.4;
-    padding:10px;	
-}
-
-#wrap{
-	margin:30px auto;
-	width:480px;
-}
-#lineTabs{
-	height:30px;
-	list-style:none;
-	margin:0px auto;
-	padding:0px;
-	padding-right:30px;
-	padding-left:10px;
-	width:440px;
-}
-#lineTabs li{
-	display:block;
-	float:right;
-	margin:0px;
-	padding:0px;
-	position:relative;
-	overflow:visible;
-	text-align:left;
-	width:110px;
-}
-#lineTabs li a{
-	background:url(images/tab.png);
-	color:#dbdbdb;
-	display:block;
-	font:normal 14px arial;
-	height:16px;
-	margin:0px -10px;
-	padding:7px 20px;
-	position:relative;
-	text-decoration:none;
-	width:90px;
-#content{
-	background:white;
-	border:1px solid #4c9ac3;
-	margin:0px;
-	padding:10px;
-	text-align:justify;
-	}
-   
-	
-   </style>        
+        <link rel="stylesheet" type="text/css" href="styles/main.css" >
     </head>
-    
     <body>
-    
         <header>
-        <div class="nav" id"nav">
-            <nav>
-            <a href="#dep"> Вклады </a> |<a href="#calculator">Калькулятор</a> | <a href="#info">О банке</a> | <a href="#offices">Отделения</a> | <p>8 800 2000-946</p></nav> 
+            <div class="nav" id"nav">
+                <nav>
+                    <a href="#dep"> Вклады </a> |<a href="#calculator">Калькулятор</a> | <a href="#info">О банке</a> | <a href="#offices">Отделения</a> | <p>8 800 2000-946</p></nav>
             </div>
         </header>
-        <img src="Strah.png"/>                 
+        <img src="images/Strah.png"/>
         <h1>Вклады в Банк «Кедр» до 10,28%</h1>
-                    <h2>Капитализация процентов. Вклады застрахованы государством.</h2>
+        <h2>Капитализация процентов. Вклады застрахованы государством.</h2>
         <section id="calculator">
             <a name="calculator"></a>
             <div class="img2" id="img2">
-            <style type="text/css">
-           
-            #img2{
-    padding-right;
-    position: right; 
-    bottom: 15px; 
-    right: 60px;     
-    line-height: 1px;
-    }	
-    </style>
-            <img src="coins.png" alt="coins"/>
+                <img src="images/coins.png" alt="coins"/>
             </div>
             <form action="/echo" method="post">
-            <label for="area-field">Я хочу вложить <br> на срок</label>
-            <textarea name="area-info" id="area-field" rows="1" cols="10"></textarea>
-            <br>
-            <select>
-                <option>2 месяца</option>
-                <option>3 месяца</option>
-                <option>6 месяцев</option>
-                <option>1 год</option>
-                <option selected>1,5 года</option>
-                <option>2 года</option>            
+                <label for="area-field">Я хочу вложить <br> на срок</label>
+                <textarea name="area-info" id="area-field" rows="1" cols="10"></textarea>
+                <br>
+                <select>
+                    <option>2 месяца</option>
+                    <option>3 месяца</option>
+                    <option>6 месяцев</option>
+                    <option>1 год</option>
+                    <option selected>1,5 года</option>
+                    <option>2 года</option>
                 </select>
                 <br>
-            <input type="checkbox" name="part" id="part" checked>
-            <label for="part">Частичное снятие средств без потери процента</label>
-          <br>
-            <input type="checkbox" name="monthly" id="monthly" checked>
-            <label for="monthly">Ежемесячное пополнение вклада</label> 
-            <br>
-            <label for="area-field">Хочу пополнять на</label>
-            <br>
-            <textarea name="area-info" id="area-field" rows="1" cols="10"></textarea>                      <p>Доход</p>
+                <input type="checkbox" name="part" id="part" checked>
+                <label for="part">Частичное снятие средств без потери процента</label>
+                <br>
+                <input type="checkbox" name="monthly" id="monthly" checked>
+                <label for="monthly">Ежемесячное пополнение вклада</label>
+                <br>
+                <label for="area-field">Хочу пополнять на</label>
+                <br>
+                <textarea name="area-info" id="area-field" rows="1" cols="10"></textarea>                      <p>Доход</p>
                 <input type="radio" name="income" id="deposit" value="deposit">
                 <label for id="deposit"> Накапливать на депозите, увеличивая % годовых </label>
                 <br>
@@ -116,154 +50,106 @@
                 <label for id="month"> Ежемесячно переводить на текущий счёт</label>
                 <br>
                 <input type="button" value="Посетить наши офисы">
-            
-        </form>
-        
+            </form>
         </section>
         <section id="dep">
-        <div id="wrap">
-		<ul id="lineTabs">
-			<li><a href="#">Высокий процент</a></li>
-			<li><a href="#">Гарантии банка</a></li>
-			
-		</ul>
-		<div id="content">
-			<p>Банк является участником государственной Системы Страхования Вкладов (Свидетельство № 95 от 21.10.2004). Вы можете быть уверены, что государство защитит все ваши вклады и гарантированно вернет вам до 700 000 рублей согласно Федеральному закону «О страховании вкладов физических лиц в банках Российской Федерации» №177-ФЗ от 23 декабря 2003 года.</p>
-		</div>
-	</div>                   </section>
+            <div id="wrap">
+                <ul id="lineTabs">
+                    <li><a href="#">Высокий процент</a></li>
+                    <li><a href="#">Гарантии банка</a></li>
+                </ul>
+                <div id="content">
+                    <p>Банк является участником государственной Системы Страхования Вкладов (Свидетельство № 95 от 21.10.2004). Вы можете быть уверены, что государство защитит все ваши вклады и гарантированно вернет вам до 700 000 рублей согласно Федеральному закону «О страховании вкладов физических лиц в банках Российской Федерации» №177-ФЗ от 23 декабря 2003 года.</p>
+                </div>
+            </div>
+        </section>
         <section id="info">
-         <h2>О Банке</h2>
-<p>Коммерческий банк, основан 1991 году в Красноярске.
-<br>
-Участник системы страхования вкладов.
-<br>
-Лидер в Красноярском крае по объему привлеченных вкладов физических лиц.
-<br>
-banki.ru	
-</p>
-<a name="info"></a>
+            <h2>О Банке</h2>
+            <p>Коммерческий банк, основан 1991 году в Красноярске.
+                <br>
+                Участник системы страхования вкладов.
+                <br>
+                Лидер в Красноярском крае по объему привлеченных вкладов физических лиц.
+                <br>
+                banki.ru
+            </p>
+            <a name="info"></a>
         </section>
         <section id="deposit-info">
         </section>
         <section id="offices">
-        <a name="offices"></a>
-        <h2>68 отделений Банка в Красноярском крае</h2>
-        <form action="/echo" method="post">
-        <select>
-                <option selected>Красноярск</option>
-                <option>Ачинск</option>
-                <option>Боготол</option>
-                <option>Богучаны</option>
-                <option>Бородино</option>
-                <option>Дивногорск</option> 
-                <option>Енисейск</option>
-                <option>Железногорск</option>
-                <option>Заозерный</option>
-                <option>Зеленогорск</option>
-                <option>Иланский</option>
-                <option>Канск</option> 
-                <option>Кодинск</option>
-                <option>Козулька</option>
-                <option>Лесосибирск</option>
-                <option>Минусинск</option>
-                <option>Назарово</option>
-                <option>Нижний Ингаш</option>
-                <option>Норильск</option>
-                <option>Саянский</option>
-                <option>Ужур</option>
-                <option>Уяр</option>
-                <option>Черногорск</option>
-                <option>Шарыпово</option>           
-                     </select>
-                        </form>
+            <a name="offices"></a>
+            <h2>68 отделений Банка в Красноярском крае</h2>
+            <form action="/echo" method="post">
+                <select>
+                    <option selected>Красноярск</option>
+                    <option>Ачинск</option>
+                    <option>Боготол</option>
+                    <option>Богучаны</option>
+                    <option>Бородино</option>
+                    <option>Дивногорск</option>
+                    <option>Енисейск</option>
+                    <option>Железногорск</option>
+                    <option>Заозерный</option>
+                    <option>Зеленогорск</option>
+                    <option>Иланский</option>
+                    <option>Канск</option>
+                    <option>Кодинск</option>
+                    <option>Козулька</option>
+                    <option>Лесосибирск</option>
+                    <option>Минусинск</option>
+                    <option>Назарово</option>
+                    <option>Нижний Ингаш</option>
+                    <option>Норильск</option>
+                    <option>Саянский</option>
+                    <option>Ужур</option>
+                    <option>Уяр</option>
+                    <option>Черногорск</option>
+                    <option>Шарыпово</option>
+                </select>
+            </form>
         </section>
         <section id="feedback">
-        <h2>Задайте вопрос специалисту банка</h2>
-                    <a name="feedback"></a>
+            <h2>Задайте вопрос специалисту банка</h2>
+            <a name="feedback"></a>
             <form action="" method="post" class="text_form" >
-<style type="text/css">
-#contact-wrapper {
-	width:500px;
-	border:1px solid #e2e2e2;
-	background:#F0FFF0;
-	padding:20px;
-}
-#contact-wrapper div {
-	clear:both;
-	margin:1em 0;
-}
-#contact-wrapper label {
-	display:block;
-	float:none;
-	font-size:16px;
-	width:auto;
-}
-form#contactform input {
-	border-color:#B7B7B7 #E8E8E8 #E8E8E8 #B7B7B7;
-	border-style:solid;
-	border-width:1px;
-	padding:5px;
-	font-size:16px;
-	color:#F0FFF0;
-}
-form#contactform textarea {
-	font-family:Arial, Tahoma, Helvetica, sans-serif;
-	font-size:100%;
-	padding:0.6em 0.5em 0.7em;
-	border-color:#B7B7B7 #E8E8E8 #E8E8E8 #B7B7B7;
-	border-style:solid;
-	border-width:1px;
-}
-#submit{
-	background:#FFFFE0;
-	border-radius: 20px}
-</style>
-
-</head>
-
-<body>
-	
-
-
-
-         <div id="contact-wrapper">
-
-	<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" id="contactform">
-		<div>
-		    <label for="name"><strong>Имя:</strong></label>
-			<input type="text" size="30" name="contactname" id="contactname" value="" class="required" />
-		</div>
-		<div>
-			<label for="phone"><strong>Телефон:</strong></label>
-			<input type="text" size="30" name="phone" id="phone" value="" class="required phone" />
-		</div>
-        <p>Перезвонить</p>
-        <input type="radio" name="call" id="now" value="now">
-<label for id="now"> Сейчас</label>
-<input type="radio" name="сall" id="later" value="later" checked>
-<label for id="later"> Позже</label>
- <form>
-    <input type="date" name="calendar" value="2014-07-01"
-    max="2012-06-04" min="2014-08-30">
-  </form>
-		<div>
-			<label for="message"><strong>Сообщение:</strong></label>
-			<textarea rows="5" cols="40" name="message" id="message" class="required"></textarea>
-		</div>
-	    <input type="submit" value="Отправить" name="submit" id="submit"/>
-	</form>
-	</div>
+                <div id="contact-wrapper">
+                    <form method="post" id="contactform">
+                        <div>
+                            <label for="name"><strong>Имя:</strong></label>
+                            <input type="text" size="30" name="contactname" id="contactname" value="" class="required" />
+                        </div>
+                        <div>
+                            <label for="phone"><strong>Телефон:</strong></label>
+                            <input type="text" size="30" name="phone" id="phone" value="" class="required phone" />
+                        </div>
+                        <p>Перезвонить</p>
+                        <input type="radio" name="call" id="now" value="now">
+                        <label for id="now"> Сейчас</label>
+                        <input type="radio" name="сall" id="later" value="later" checked>
+                        <label for id="later"> Позже</label>
+                        <form>
+                            <input type="date" name="calendar" value="2014-07-01"
+                                   max="2012-06-04" min="2014-08-30">
+                        </form>
+                        <div>
+                            <label for="message"><strong>Сообщение:</strong></label>
+                            <textarea rows="5" cols="40" name="message" id="message" class="required"></textarea>
+                        </div>
+                        <input type="submit" value="Отправить" name="submit" id="submit"/>
+                    </form>
+                </div>
+            </form>
         </section>
         <footer>
-        <div id="footer"
-        <p>Калькулятор вкладов
-        <img src="calc.png" width="32px" height="32px"/>
-        </p>
-        <br>
-        <p>Отделения в вашем городе
-        <img src="loc.png" width="32px" height="32px"/>
-        </p>
-        </div>
+            <div id="footer">
+                <p>Калькулятор вкладов
+                    <img src="images/calc.png" width="32px" height="32px"/>
+                </p>
+                <p>Отделения в вашем городе
+                    <img src="images/loc.png" width="32px" height="32px"/>
+                </p>
+            </div>
         </footer>
     </body>
 </html>
