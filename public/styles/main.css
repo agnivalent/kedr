@@ -5,7 +5,11 @@ html, body {
 	font-family:Arial, sans-serif;
     font-size:14px;
     line-height:1.4;
+<<<<<<< HEAD
     padding:10px;
+=======
+    padding:10px;
+>>>>>>> 6a42f7f054ec13bd965dd6e5781a0361faceed3e
 }
 
 #wrap{
@@ -87,4 +91,9 @@ form#contactform textarea {
     background:#FFFFE0;
     border-radius: 20px
 }
+<<<<<<< HEAD
 
+=======
+
+
+>>>>>>> 6a42f7f054ec13bd965dd6e5781a0361faceed3e
