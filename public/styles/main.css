@@ -1,0 +1,90 @@
+html, body {
+    background:#F5F5F5;
+	margin:30px;
+	padding:20px;
+	font-family:Arial, sans-serif;
+    font-size:14px;
+    line-height:1.4;
+    padding:10px;
+}
+
+#wrap{
+	margin:30px auto;
+	width:480px;
+}
+#lineTabs{
+	height:30px;
+	list-style:none;
+	margin:0px auto;
+	padding:0px;
+	padding-right:30px;
+	padding-left:10px;
+	width:440px;
+}
+#lineTabs li{
+	display:block;
+	float:right;
+	margin:0px;
+	padding:0px;
+	position:relative;
+	overflow:visible;
+	text-align:left;
+	width:110px;
+}
+#lineTabs li a{
+	background:url(images/tab.png);
+	color:#dbdbdb;
+	display:block;
+	font:normal 14px arial;
+	height:16px;
+	margin:0px -10px;
+	padding:7px 20px;
+	position:relative;
+	text-decoration:none;
+	width:90px;
+}
+#content{
+	background:white;
+	border:1px solid #4c9ac3;
+	margin:0px;
+	padding:10px;
+	text-align:justify;
+}
+
+#contact-wrapper {
+    width:500px;
+    border:1px solid #e2e2e2;
+    background:#F0FFF0;
+    padding:20px;
+}
+#contact-wrapper div {
+    clear:both;
+    margin:1em 0;
+}
+#contact-wrapper label {
+    display:block;
+    float:none;
+    font-size:16px;
+    width:auto;
+}
+form#contactform input {
+    border-color:#B7B7B7 #E8E8E8 #E8E8E8 #B7B7B7;
+    border-style:solid;
+    border-width:1px;
+    padding:5px;
+    font-size:16px;
+    color:#F0FFF0;
+}
+form#contactform textarea {
+    font-family:Arial, Tahoma, Helvetica, sans-serif;
+    font-size:100%;
+    padding:0.6em 0.5em 0.7em;
+    border-color:#B7B7B7 #E8E8E8 #E8E8E8 #B7B7B7;
+    border-style:solid;
+    border-width:1px;
+}
+#submit{
+    background:#FFFFE0;
+    border-radius: 20px
+}
+
