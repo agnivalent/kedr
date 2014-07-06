@@ -3,29 +3,45 @@
     <head>
         <meta charset="utf-8"/>
         <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <title>ОАО КБ «Кедр» — Вклады в банк до 10,28%</title>
+        <title>ОАО КБ «Кедр» — Вклады в банк до 10,66%</title>
         <link rel="stylesheet" type="text/css" href="styles/main.css" >
+        <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <header>
-            <div class="nav" id"nav">
+            <div id="logo"><img src="images/logo.svg" height="100"/></div>
+            <div id="menu">
                 <nav>
-                    <a href="#dep"> Вклады </a> |<a href="#calculator">Калькулятор</a> | <a href="#info">О банке</a> | <a href="#offices">Отделения</a> | <p>8 800 2000-946</p></nav>
-            </div>
+                <ul>
+                    <li><a href="#dep"> Вклады </a></li>                    
+                    <li><a href="#calculator">Калькулятор</a></li>
+                    <li><a href="#info">О банке</a></li>
+                    <li><a href="#offices">Отделения</a></li>
+                </ul>
+                </nav>
+                <div id="phone">8 800 2000 946</div>
+                </div>
         </header>
-        <img src="images/Strah.png"/>
-        <h1>Вклады в Банк «Кедр» до 10,28%</h1>
-        <h2>Капитализация процентов. Вклады застрахованы государством.</h2>
-        <section id="calculator">
+        <div id="dep" class="fullwidth" style="background-image: url(images/coins.png); ">
+            <div>          
+                <h1>Вклады в Банк «Кедр» до 10,66%</h1>
+                <h3>В рублях, долларах США и евро. С капитализацией, пополнением и частичным снятием.<br/>Вклады застрахованы государством.</h3>
+            </div>            
+        </div>
+        <section id="calculator" class="block fullwidth">
             <a name="calculator"></a>
-            <div class="img2" id="img2">
-                <img src="images/coins.png" alt="coins"/>
-            </div>
+                <img id="img-insured" src="images/dep-ins.png" width="158"/>
             <form action="/echo" method="post">
-                <label for="area-field">Я хочу вложить <br> на срок</label>
-                <textarea name="area-info" id="area-field" rows="1" cols="10"></textarea>
-                <br>
-                <select>
+                <label for="area-field" class="left-label">Я хочу преумножить</label>
+                <input type="text" name="area-info" id="area-field" rows="1" cols="10"></input>
+                <a class="change-currency selected" href="#">₷ Рубли</a>
+                <a class="change-currency" href="#">$ Доллары</a>
+                <a class="change-currency" href="#">€ Евро</a>
+                <br/>
+                <label for="time-field" class="left-label">на срок</label>
+                <select id="time-field">
                     <option>2 месяца</option>
                     <option>3 месяца</option>
                     <option>6 месяцев</option>
@@ -33,37 +49,103 @@
                     <option selected>1,5 года</option>
                     <option>2 года</option>
                 </select>
-                <br>
+                <br/>
+                <label class="left-label">&nbsp</label>
                 <input type="checkbox" name="part" id="part" checked>
                 <label for="part">Частичное снятие средств без потери процента</label>
-                <br>
+                <br/>
+                <label class="left-label">&nbsp</label>
                 <input type="checkbox" name="monthly" id="monthly" checked>
                 <label for="monthly">Ежемесячное пополнение вклада</label>
-                <br>
-                <label for="area-field">Хочу пополнять на</label>
-                <br>
-                <textarea name="area-info" id="area-field" rows="1" cols="10"></textarea>                      <p>Доход</p>
+                <br/>
+                <label class="left-label">Доход</label>
                 <input type="radio" name="income" id="deposit" value="deposit">
                 <label for id="deposit"> Накапливать на депозите, увеличивая % годовых </label>
-                <br>
+                <br/>
+                <label class="left-label">&nbsp</label>
                 <input type="radio" name="income" id="month" value="month" checked>
                 <label for id="month"> Ежемесячно переводить на текущий счёт</label>
-                <br>
-                <input type="button" value="Посетить наши офисы">
+                <br/>
+                <hr/>
+                <label class="left-label total-label">Вы получите</label>
+                <span class="total">363 920 ₷</span>
+
+                <br/>
+                <label class="left-label">&nbsp</label>
+                <label class="info-label">Ваш вклад:</label><a href="#">Сберегательный</a>
+                <br/>
+                <label class="left-label">&nbsp</label>
+                <label class="info-label">Доход по вкладу:</label><span>63 920 ₷</span>
+                <br/>
+                <label class="left-label">&nbsp</label>
+                <label class="info-label">Эффективная ставка:</label><span>10,66%</span>
+                <br/>
+                <div class="center">
+                <input type="button" id="visit-offices-button" value="Посетить наши офисы"/>
+                </div>
+                <div class="right-bottom-corner">
+                    <span><img src="images/printer.png" width="26"></span><a href="#">Распечатать результаты</a><br/>
+                    <span><img src="images/layers.png" width="23"></span><a href="#">Сравнить условия вкладов</a><br/>
+                    <span><img src="images/chat.png" style="margin-top: 3px;" width="26"></span><a href="#">Задать вопрос специалисту</a>
+                </div>
+                </div>
+                </div>
             </form>
         </section>
-        <section id="dep">
-            <div id="wrap">
-                <ul id="lineTabs">
-                    <li><a href="#">Высокий процент</a></li>
+        <section>
+            <div id="tabbar">
+            <div class="outer-tabbar-left"><div class="outer">&nbsp</div></div>
+                <div id="tabs">
+                <ul>
+                    <li class="active"><a href="#">Высокий процент</a></li>
                     <li><a href="#">Гарантии банка</a></li>
                 </ul>
-                <div id="content">
-                    <p>Банк является участником государственной Системы Страхования Вкладов (Свидетельство № 95 от 21.10.2004). Вы можете быть уверены, что государство защитит все ваши вклады и гарантированно вернет вам до 700 000 рублей согласно Федеральному закону «О страховании вкладов физических лиц в банках Российской Федерации» №177-ФЗ от 23 декабря 2003 года.</p>
                 </div>
-            </div>
+                <div class="outer-tabbar-right"><div class="outer">&nbsp</div></div>
+                <div style="clear:both"/>
+                </div>
+                <div class="fullwidth block">
+                    <div class="col-1-3" >
+                    <div class="block-dep-info">
+                        <h3>Вклад «Накопительный»</h3>
+                        <ul>
+                            <li>Вклад на 2 года под 9,5% в рублях, до 2,5% в валюте</li>
+                            <li>Высокая ставка досрочного закрытия</li>
+                            <li>Сумма пополнения не ограничена</li>
+                            </ul>
+                            <hr/>
+                            <img src="images/layers.png" width="23"/><a href="#">Полные условия вклада «Накопительный»</a>
+                    </div>
+                    </div>
+                    <div class="col-1-3">
+                    <div class="block-dep-info">
+                        <h3>Вклад «Накопительный»</h3>
+                        <ul>
+                            <li>Вклад на 2 года под 9,5% в рублях, до 2,5% в валюте</li>
+                            <li>Высокая ставка досрочного закрытия</li>
+                            <li>Сумма пополнения не ограничена</li>
+                            </ul>
+                            <hr/>
+                            <img src="images/layers.png" width="23"/><a href="#">Полные условия вклада «Накопительный»</a>
+                    </div>
+                    </div>
+                    <div class="col-1-3">
+                    <div class="block-dep-info">
+                        <h3>Вклад «Накопительный»</h3>
+                        <ul>
+                            <li>Вклад на 2 года под 9,5% в рублях, до 2,5% в валюте</li>
+                            <li>Высокая ставка досрочного закрытия</li>
+                            <li>Сумма пополнения не ограничена</li>
+                            </ul>
+                            <hr/>
+                            <img src="images/layers.png" width="23"/><a href="#">Полные условия вклада «Накопительный»</a>
+                    </div>
+                    </div>
+                    <div style="clear:both"/>
+                </div>
+
         </section>
-        <section id="info">
+        <section id="info" class="fullwidth">
             <h2>О Банке</h2>
             <p>Коммерческий банк, основан 1991 году в Красноярске.
                 <br>
@@ -108,12 +190,10 @@
                     <option>Шарыпово</option>
                 </select>
             </form>
-        </section>
-        <section id="feedback">
+        <section id="feedback" class="block fullwidth">
             <h2>Задайте вопрос специалисту банка</h2>
             <a name="feedback"></a>
-            <form action="" method="post" class="text_form" >
-                <div id="contact-wrapper">
+            <form action="/echo" method="post" class="text_form" >
                     <form method="post" id="contactform">
                         <div>
                             <label for="name"><strong>Имя:</strong></label>
