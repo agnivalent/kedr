@@ -143,7 +143,6 @@
                     </div>
                     <div style="clear:both"/>
                 </div>
-
         </section>
         <section id="info" class="fullwidth">
             <h2>О Банке</h2>
@@ -190,44 +189,46 @@
                     <option>Шарыпово</option>
                 </select>
             </form>
-        <section id="feedback" class="block fullwidth">
-            <h2>Задайте вопрос специалисту банка</h2>
+        <section id="feedback" class="feedback">
             <a name="feedback"></a>
-            <form action="/echo" method="post" class="text_form" >
-                    <form method="post" id="contactform">
-                        <div>
-                            <label for="name"><strong>Имя:</strong></label>
-                            <input type="text" size="30" name="contactname" id="contactname" value="" class="required" />
-                        </div>
-                        <div>
-                            <label for="phone"><strong>Телефон:</strong></label>
-                            <input type="text" size="30" name="phone" id="phone" value="" class="required phone" />
-                        </div>
-                        <p>Перезвонить</p>
-                        <input type="radio" name="call" id="now" value="now">
-                        <label for id="now"> Сейчас</label>
-                        <input type="radio" name="сall" id="later" value="later" checked>
-                        <label for id="later"> Позже</label>
-                        <form>
-                            <input type="date" name="calendar" value="2014-07-01"
-                                   max="2012-06-04" min="2014-08-30">
-                        </form>
-                        <div>
-                            <label for="message"><strong>Сообщение:</strong></label>
-                            <textarea rows="5" cols="40" name="message" id="message" class="required"></textarea>
-                        </div>
-                        <input type="submit" value="Отправить" name="submit" id="submit"/>
-                    </form>
-                </div>
-            </form>
-        </section>
+            <h2>Задайте вопрос специалисту банка</h2>
+            <div class="feedback-form">
+              <form action="/echo" method="post">
+                <label for="area-field" class="feed-label">Ваше имя</label>
+                <input id="area-field" type="name" name="area-info" id="area-field" rows="1" cols="40"></input>
+                <br/>
+                <label for="number-field" class="feed-label" value="(495) 123 45 67">Телефон:+7</label>
+                <input type="feed" name="area-info" id="area-field" rows="1" cols="50"></input>
+                <br>
+                <label for="call-field" class="feed-label">Перезвонить</label>
+                <input type="checkbox" name="now" id="now" checked>
+                <label for="now">Сейчас</label>
+                <input type="checkbox" name="later" id="later">
+                <label for="later">Позже</label>
+                <input type="feed" name="calendar" value="10.07.2014" max="2066-06-06" min="2000-01-01">
+                <select id="timefield">
+                    <option selected>10:00</option>
+                    <option>11:00</option>
+                    <option>12:00</option>
+                    <option>13:00</option>
+                    <option>14:00</option>
+                    <option>15:00</option>
+                </select>
+                <br>
+                  <label for="area-field"></label>
+                 <textarea name="area-info" type="feed" id="area-field" value="Ваш вопрос" rows="5" cols="40"></textarea>
+                 <br>
+                 <input type="submit" id="submit" value="Отправить">
+                </form>
+            </div>
+       </section>
         <footer>
             <div id="footer">
                 <p>Калькулятор вкладов
-                    <img src="images/calc.png" width="32px" height="32px"/>
+                    <img src="images/calculator.png" width="26px"/>
                 </p>
                 <p>Отделения в вашем городе
-                    <img src="images/loc.png" width="32px" height="32px"/>
+                    <img src="images/map.png" width="30px"/>
                 </p>
             </div>
         </footer>

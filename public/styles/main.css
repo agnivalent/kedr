@@ -166,7 +166,7 @@ a.change-currency.selected {
     padding-top: 3px;
     color: white;
     border: 1px #066386 inset;
-    /*background-color: #066386;*/
+    background-color: #066386;
     background-color: #1a799d;
     border-radius: 5px;
 }
@@ -373,15 +373,39 @@ header li a {
 	width:90px;
 }*/
 
-#submit{
-    background:#009b3a;
-}
-#feedback{
-    background-color:white;
-    margin: 5px;
-    padding: 10px;
-    padding-bottom: 20px;
+.feedback-form{
+    width: 40%;
+    height: 80%;
+display: inline-table;
+text-align: left;
+    font-size: 16px;
+    background-color: #e7e7e7;
+    margin-left: 60px;
+    margin-right: 30%;
     border-radius: 10px;
-    text-align: left;
+    padding: 20px;
 }
-
+#area-field{
+    position: center;
+}
+#submit{
+    border-radius: 5px;
+    background-color: #64df77;
+  font-size: 1.1em;
+border: none;
+color: white;
+line-height: 28px;
+padding-left: 25px;
+padding-right: 25px;
+padding-bottom: right;
+}
+.nmfld{
+    width: 399px;
+    margin-left: 45px;
+}
+.nmfld input[type=text]{
+    border: 1px solid #999999;
+    height: 17px;
+    padding: 6px 7px 7px 7px;
+    font-size: 16px;
+}
