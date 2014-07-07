@@ -195,30 +195,23 @@
             <div class="feedback-form">
               <form action="/echo" method="post">
                 <label for="area-field" class="feed-label">Ваше имя</label>
-                <input id="area-field" type="name" name="area-info" id="area-field" rows="1" cols="40"></input>
+                <input type="text" name="area-info" id="area-field" rows="1" cols="40"></input>
                 <br/>
                 <label for="number-field" class="feed-label" value="(495) 123 45 67">Телефон:+7</label>
-                <input type="feed" name="area-info" id="area-field" rows="1" cols="50"></input>
+                <input type="tel" name="area-info" id="area-field" rows="1" cols="50"></input>
                 <br>
                 <label for="call-field" class="feed-label">Перезвонить</label>
                 <input type="checkbox" name="now" id="now" checked>
                 <label for="now">Сейчас</label>
                 <input type="checkbox" name="later" id="later">
                 <label for="later">Позже</label>
-                <input type="feed" name="calendar" value="10.07.2014" max="2066-06-06" min="2000-01-01">
-                <select id="timefield">
-                    <option selected>10:00</option>
-                    <option>11:00</option>
-                    <option>12:00</option>
-                    <option>13:00</option>
-                    <option>14:00</option>
-                    <option>15:00</option>
-                </select>
+                <input type="date" name="calendar" value="10.07.2014" max="2066-06-06" min="2000-01-01"></input>
+               <input type="time"></input>
                 <br>
                   <label for="area-field"></label>
-                 <textarea name="area-info" type="feed" id="area-field" value="Ваш вопрос" rows="5" cols="40"></textarea>
+                 <textarea name="area-info" type="text" id="area-field" value="Ваш вопрос" rows="5" cols="40"></textarea>
                  <br>
-                 <input type="submit" id="submit" value="Отправить">
+                 <input type="button" id="submit" value="Отправить">
                 </form>
             </div>
        </section>
