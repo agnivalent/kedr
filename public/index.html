@@ -189,24 +189,24 @@
                     <option>Шарыпово</option>
                 </select>
             </form>
-        <section id="feedback" class="feedback">
+        <section id="feedback" class="feedback fullwidth">
             <a name="feedback"></a>
             <h2>Задайте вопрос специалисту банка</h2>
-            <div class="feedback-form">
+            <div class="feedback-form block">
               <form action="/echo" method="post">
                 <label for="area-field" class="feed-label">Ваше имя</label>
-                <input id="area-field" type="name" name="area-info" id="area-field" rows="1" cols="40"></input>
+                <input id="area-field" type="text" name="area-info" id="area-field" rows="1" cols="40"></input>
                 <br/>
-                <label for="number-field" class="feed-label" value="(495) 123 45 67">Телефон:+7</label>
-                <input type="feed" name="area-info" id="area-field" rows="1" cols="50"></input>
+                <label for="number-field" class="feed-label" value="(495) 123 45 67"><div style="width: 110px;">Телефон</div><div class="phone-code-label">+7</div></label>
+                <input type="text" name="area-info" id="area-field" rows="1" cols="50"></input>
                 <br>
                 <label for="call-field" class="feed-label">Перезвонить</label>
                 <input type="checkbox" name="now" id="now" checked>
                 <label for="now">Сейчас</label>
                 <input type="checkbox" name="later" id="later">
                 <label for="later">Позже</label>
-                <input type="feed" name="calendar" value="10.07.2014" max="2066-06-06" min="2000-01-01">
-                <select id="timefield">
+                <input type="text" name="calendar" value="10.07.2014" max="2066-06-06" min="2000-01-01" class="date">
+                <select id="timefield" class="time">
                     <option selected>10:00</option>
                     <option>11:00</option>
                     <option>12:00</option>
@@ -218,7 +218,9 @@
                   <label for="area-field"></label>
                  <textarea name="area-info" type="feed" id="area-field" value="Ваш вопрос" rows="5" cols="40"></textarea>
                  <br>
-                 <input type="submit" id="submit" value="Отправить">
+                 <div class="right">
+                 <input type="button" id="submit" value="Отправить">
+                 </div>
                 </form>
             </div>
        </section>
