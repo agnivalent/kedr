@@ -221,11 +221,11 @@
             <h2>Задайте вопрос специалисту банка</h2>
             <div class="feedback-form block">
               <form action="/echo" method="post">
-                <label for="area-field" class="feed-label">Ваше имя</label>
-                <input id="area-field" type="text" name="area-info" id="area-field" rows="1" cols="40"></input>
-                <br/>
+                <label for="name-field" class="feed-label">Ваше имя</label>
+                <input type="text" name="name-field" id="name-field"></input>
+                <br>
                 <label for="number-field" class="feed-label" value="(495) 123 45 67"><div style="width: 110px;">Телефон</div><div class="phone-code-label">+7</div></label>
-                <input type="text" name="area-info" id="area-field" rows="1" cols="50"></input>
+                <input type="text" name="area-info" id="area-field"></input>
                 <br>
                 <label for="call-field" class="feed-label">Перезвонить</label>
                 <input type="checkbox" name="now" id="now" checked>
@@ -233,6 +233,7 @@
                 <input type="checkbox" name="later" id="later">
                 <label for="later">Позже</label>
                 <input type="text" name="calendar" value="10.07.2014" max="2066-06-06" min="2000-01-01" class="date">
+                <img id="img-calendar"src="images/calendar.png" width="27px">
                 <select id="timefield" class="time">
                     <option selected>10:00</option>
                     <option>11:00</option>
@@ -243,22 +244,46 @@
                 </select>
                 <br>
                   <label for="area-field"></label>
-                 <textarea name="area-info" type="feed" id="area-field" value="Ваш вопрос" rows="5" cols="40"></textarea>
+                 <textarea name="area-info" type="text" id="area-field" value="Ваш вопрос" rows="5"></textarea>
                  <br>
                  <div class="right">
                  <input type="button" id="submit" value="Отправить">
                  </div>
                 </form>
             </div>
+            <div class="call">
+            <h1 >8 800 2000 946</h2>
+       <h2>Позвоните и задайте вопрос по телефону.
+        <br>
+        Звонок по России бесплатный.<h2>
+        <img id="img-24" src="images/247.png"/>
+            <h3 >Колл-центр работает 
+            <br>
+            круглосуточно
+            <br>
+            и без выходных</h3>
+            <div style="clear:both"/>
+        </div>
        </section>
+       <!-- <section id="info-block"> -->
+
+
+       <!-- </section> -->
         <footer>
             <div id="footer">
-                <p>Калькулятор вкладов
-                    <img src="images/calculator.png" width="26px"/>
+                <p align="left">Генеральная лицензия ЦБ РФ №1574
+                    <br>
+                    <b>Система страхования вкладов</b>
+                    <br>
+                    Вклады в банк застрахованы государством
+                    <br>
+                    Свидетельство №95
                 </p>
-                <p>Отделения в вашем городе
-                    <img src="images/map.png" width="30px"/>
-                </p>
+                <p align="center">© ОАО КБ "Кедр", 1991-2014</p>
+                <div class="right-corner">
+                    <span><img src="images/calculator.png" width="26"></span><a href="#">Калькулятор вкладов</a><br/>
+                    <span><img src="images/map.png" width="30"></span><a href="#">Отделения в вашем городе</a><br/>
+                </div>
             </div>
         </footer>
     </body>
