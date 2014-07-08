@@ -180,9 +180,10 @@ a.change-currency.selected {
     padding-top: 3px;
     color: white;
     border: 1px #066386 inset;
-    background-color: #066386;
-    background-color: #1a799d;
+    /*background-color: #066386;*/
+    /*background-color: #1a799d;*/
     border-radius: 5px;
+    background-color: #009b3a;
 }
 
 .total {
@@ -271,7 +272,7 @@ header li a {
 
 .outer-tabbar-left, .outer-tabbar-right {
     float: left;
-    width: 380px;
+    width: 328px;
     
     background-color: #ffffff;
     height: 33px;
@@ -397,6 +398,13 @@ header li a {
     background-color: white;
 }
 
+.feedback h2 {
+    font-weight: 400;
+    font-size: 2.1em;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
 .feedback-form{
     width: 60%;
     display: inline-table;
@@ -446,12 +454,18 @@ label.feed-label div {
     margin-bottom: -9px;
 }
 footer{
-    height: 20px;
-    margin-top: 30px;
-    margin-right: 40px;
-    text-align: right;
-    font-size: 14px;
+    height: 100px;
+/*    margin-top: 30px;
+    margin-right: 40px;*/
+    margin: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    color: #555555;
+    font-size: 0.9em;
+    /*font-size: 14px;*/
 }
+
 #info-block{
     padding right: 30px;
     margin-right: 60px;
@@ -473,7 +487,7 @@ font-size: 2.8em;
 
 }
 .call h3{
-    margin-top: 26px;
+    margin-top: 18px;
     font-size: 1.6em;
     line-height: 1em;
     vertical-align: middle;
@@ -483,4 +497,5 @@ font-size: 2.8em;
 }
 #img-24{
     float: left;
+    margin-right: 5px;
 }
