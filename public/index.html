@@ -16,151 +16,151 @@
             <div id="logo"><img src="images/logo.svg" height="100"/></div>
             <div id="menu">
                 <nav>
-                <ul>
-                    <li><a href="#dep"> Вклады </a></li>                    
-                    <li><a href="#calculator">Калькулятор</a></li>
-                    <li><a href="#info">О банке</a></li>
-                    <li><a href="#offices">Отделения</a></li>
-                </ul>
+                    <ul>
+                        <li><a href="#dep"> Вклады </a></li>
+                        <li><a href="#calculator">Калькулятор</a></li>
+                        <li><a href="#info">О банке</a></li>
+                        <li><a href="#offices">Отделения</a></li>
+                    </ul>
                 </nav>
                 <div id="phone">8 800 2000 946</div>
-                </div>
+            </div>
         </header>
         <div id="dep" class="fullwidth" style="background-image: url(images/coins.png); ">
-            <div>          
+            <div>
                 <h1>Вклады в Банк «Кедр» до 10,66%</h1>
                 <h3>В рублях, долларах США и евро. С капитализацией, пополнением и частичным снятием.<br/>Вклады застрахованы государством.</h3>
-            </div>            
+            </div>
         </div>
         <section id="calculator" class="block fullwidth">
             <a name="calculator"></a>
-                <img id="img-insured" src="images/dep-ins.png" width="158"/>
+            <img id="img-insured" src="images/dep-ins.png" width="158"/>
             <form action="/echo" method="post">
                 <label for="area-field" class="left-label">Я хочу преумножить</label>
                 <input type="text" name="area-info" id="area-field" rows="1" cols="10"></input>
-                <a class="change-currency selected" href="#">₷ Рубли</a>
-                <a class="change-currency" href="#">$ Доллары</a>
-                <a class="change-currency" href="#">€ Евро</a>
-                <br/>
-                <label for="time-field" class="left-label">на срок</label>
-                <select id="time-field">
-                    <option>2 месяца</option>
-                    <option>3 месяца</option>
-                    <option>6 месяцев</option>
-                    <option>1 год</option>
-                    <option selected>1,5 года</option>
-                    <option>2 года</option>
-                </select>
-                <br/>
-                <label class="left-label">&nbsp</label>
-                <input type="checkbox" name="part" id="part" checked>
-                <label for="part">Частичное снятие средств без потери процента</label>
-                <br/>
-                <label class="left-label">&nbsp</label>
-                <input type="checkbox" name="monthly" id="monthly" checked>
-                <label for="monthly">Ежемесячное пополнение вклада</label>
-                <br/>
-                <label class="left-label">Доход</label>
-                <input type="radio" name="income" id="deposit" value="deposit">
-                <label for id="deposit"> Накапливать на депозите, увеличивая % годовых </label>
-                <br/>
-                <label class="left-label">&nbsp</label>
-                <input type="radio" name="income" id="month" value="month" checked>
-                <label for id="month"> Ежемесячно переводить на текущий счёт</label>
-                <br/>
-                <hr/>
-                <label class="left-label total-label">Вы получите</label>
-                <span class="total">363 920 ₷</span>
+            <a class="change-currency selected" href="#">₷ Рубли</a>
+            <a class="change-currency" href="#">$ Доллары</a>
+            <a class="change-currency" href="#">€ Евро</a>
+            <br/>
+            <label for="time-field" class="left-label">на срок</label>
+            <select id="time-field">
+                <option>2 месяца</option>
+                <option>3 месяца</option>
+                <option>6 месяцев</option>
+                <option>1 год</option>
+                <option selected>1,5 года</option>
+                <option>2 года</option>
+            </select>
+            <br/>
+            <label class="left-label">&nbsp</label>
+            <input type="checkbox" name="part" id="part" checked>
+            <label for="part">Частичное снятие средств без потери процента</label>
+            <br/>
+            <label class="left-label">&nbsp</label>
+            <input type="checkbox" name="monthly" id="monthly" checked>
+            <label for="monthly">Ежемесячное пополнение вклада</label>
+            <br/>
+            <label class="left-label">Доход</label>
+            <input type="radio" name="income" id="deposit" value="deposit">
+            <label for id="deposit"> Накапливать на депозите, увеличивая % годовых </label>
+            <br/>
+            <label class="left-label">&nbsp</label>
+            <input type="radio" name="income" id="month" value="month" checked>
+            <label for id="month"> Ежемесячно переводить на текущий счёт</label>
+            <br/>
+            <hr/>
+            <label class="left-label total-label">Вы получите</label>
+            <span class="total">363 920 ₷</span>
 
-                <br/>
-                <label class="left-label">&nbsp</label>
-                <label class="info-label">Ваш вклад:</label><a href="#">Сберегательный</a>
-                <br/>
-                <label class="left-label">&nbsp</label>
-                <label class="info-label">Доход по вкладу:</label><span>63 920 ₷</span>
-                <br/>
-                <label class="left-label">&nbsp</label>
-                <label class="info-label">Эффективная ставка:</label><span>10,66%</span>
-                <br/>
-                <div class="center">
+            <br/>
+            <label class="left-label">&nbsp</label>
+            <label class="info-label">Ваш вклад:</label><a href="#">Сберегательный</a>
+            <br/>
+            <label class="left-label">&nbsp</label>
+            <label class="info-label">Доход по вкладу:</label><span>63 920 ₷</span>
+            <br/>
+            <label class="left-label">&nbsp</label>
+            <label class="info-label">Эффективная ставка:</label><span>10,66%</span>
+            <br/>
+            <div class="center">
                 <input type="button" id="visit-offices-button" value="Посетить наши офисы"/>
-                </div>
-                <div class="right-bottom-corner">
-                    <span><img src="images/printer.png" width="26"></span><a href="#">Распечатать результаты</a><br/>
-                    <span><img src="images/layers.png" width="23"></span><a href="#">Сравнить условия вкладов</a><br/>
-                    <span><img src="images/chat.png" style="margin-top: 3px;" width="26"></span><a href="#">Задать вопрос специалисту</a>
-                </div>
-            </form>
-        </section>
-        <section>
-            <div id="tabbar" class="fullwidth">
-                    <div class="outer-tabbar-left"><div class="outer">&nbsp</div></div>
-                    <div id="tabs">
-                        <ul>
-                            <li class="active"><a href="#">Высокий процент</a></li>
-                            <li><a href="#">Гарантии банка</a></li>
-                        </ul> 
-                    </div>
-                <div class="outer-tabbar-right"><div class="outer">&nbsp</div></div>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-                <div class="fullwidth block">
-                    <div class="col-1-3" >
-                    <div class="block-dep-info">
-                        <h3>Вклад «Накопительный»</h3>
-                        <ul>
-                            <li>Вклад на 2 года под 9,5% в рублях, до 2,5% в валюте</li>
-                            <li>Высокая ставка досрочного закрытия</li>
-                            <li>Сумма пополнения не ограничена</li>
-                            </ul>
-                            <hr/>
-                            <img src="images/layers.png" width="23"/><a href="#">Полные условия вклада «Накопительный»</a>
-                    </div>
-                    </div>
-                    <div class="col-1-3">
-                    <div class="block-dep-info">
-                        <h3>Вклад «Накопительный»</h3>
-                        <ul>
-                            <li>Вклад на 2 года под 9,5% в рублях, до 2,5% в валюте</li>
-                            <li>Высокая ставка досрочного закрытия</li>
-                            <li>Сумма пополнения не ограничена</li>
-                            </ul>
-                            <hr/>
-                            <img src="images/layers.png" width="23"/><a href="#">Полные условия вклада «Накопительный»</a>
-                    </div>
-                    </div>
-                    <div class="col-1-3">
-                    <div class="block-dep-info">
-                        <h3>Вклад «Накопительный»</h3>
-                        <ul>
-                            <li>Вклад на 2 года под 9,5% в рублях, до 2,5% в валюте</li>
-                            <li>Высокая ставка досрочного закрытия</li>
-                            <li>Сумма пополнения не ограничена</li>
-                            </ul>
-                            <hr/>
-                            <img src="images/layers.png" width="23"/><a href="#">Полные условия вклада «Накопительный»</a>
-                    </div>
-                    </div>
-                    <div style="clear:both"/>
-                
-        </section>
-        <section id="info" class="fullwidth">
-            <h2>О Банке</h2>
-            <p>Коммерческий банк, основан 1991 году в Красноярске.
-                <br>
-                Участник системы страхования вкладов.
-                <br>
-                Лидер в Красноярском крае по объему привлеченных вкладов физических лиц.
-                <br>
-                banki.ru
-            </p>
-            <a name="info"></a>
-        </section>
-        <section id="deposit-info">
-        </section>
+            </div>
+            <div class="right-bottom-corner">
+                <span><img src="images/printer.png" width="26"></span><a href="#">Распечатать результаты</a><br/>
+                <span><img src="images/layers.png" width="23"></span><a href="#">Сравнить условия вкладов</a><br/>
+                <span><img src="images/chat.png" style="margin-top: 3px;" width="26"></span><a href="#">Задать вопрос специалисту</a>
+            </div>
+        </form>
+    </section>
+    <section>
+        <div id="tabbar" class="fullwidth">
+            <div class="outer-tabbar-left"><div class="outer">&nbsp</div></div>
+            <div id="tabs">
+                <ul>
+                    <li class="active"><a href="#">Высокий процент</a></li>
+                    <li><a href="#">Гарантии банка</a></li>
+                </ul>
+            </div>
+            <div class="outer-tabbar-right"><div class="outer">&nbsp</div></div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+    <div class="fullwidth block">
+        <div class="col-1-3" >
+            <div class="block-dep-info">
+                <h3>Вклад «Накопительный»</h3>
+                <ul>
+                    <li>Вклад на 2 года под 9,5% в рублях, до 2,5% в валюте</li>
+                    <li>Высокая ставка досрочного закрытия</li>
+                    <li>Сумма пополнения не ограничена</li>
+                </ul>
+                <hr/>
+                <img src="images/layers.png" width="23"/><a href="#">Полные условия вклада «Накопительный»</a>
+            </div>
+        </div>
+        <div class="col-1-3">
+            <div class="block-dep-info">
+                <h3>Вклад «Накопительный»</h3>
+                <ul>
+                    <li>Вклад на 2 года под 9,5% в рублях, до 2,5% в валюте</li>
+                    <li>Высокая ставка досрочного закрытия</li>
+                    <li>Сумма пополнения не ограничена</li>
+                </ul>
+                <hr/>
+                <img src="images/layers.png" width="23"/><a href="#">Полные условия вклада «Накопительный»</a>
+            </div>
+        </div>
+        <div class="col-1-3">
+            <div class="block-dep-info">
+                <h3>Вклад «Накопительный»</h3>
+                <ul>
+                    <li>Вклад на 2 года под 9,5% в рублях, до 2,5% в валюте</li>
+                    <li>Высокая ставка досрочного закрытия</li>
+                    <li>Сумма пополнения не ограничена</li>
+                </ul>
+                <hr/>
+                <img src="images/layers.png" width="23"/><a href="#">Полные условия вклада «Накопительный»</a>
+            </div>
+        </div>
+        <div style="clear:both"/>
 
-        <div class="white-background">
+    </section>
+    <section id="info" class="fullwidth">
+        <h2>О Банке</h2>
+        <p>Коммерческий банк, основан 1991 году в Красноярске.
+            <br>
+            Участник системы страхования вкладов.
+            <br>
+            Лидер в Красноярском крае по объему привлеченных вкладов физических лиц.
+            <br>
+            banki.ru
+        </p>
+        <a name="info"></a>
+    </section>
+    <section id="deposit-info">
+    </section>
+
+    <div class="white-background">
         <section id="offices">
             <a name="offices"></a>
             <h2>68 отделений Банка в Красноярском крае</h2>
@@ -195,104 +195,104 @@
 
             <div id="map" style="width: 600px; height: 400px"></div>
 
-            </section>
+        </section>
 
 
-<script type="text/javascript">
-    ymaps.ready(init);
-    var myMap, myPlacemark;
+        <script type="text/javascript">
+            ymaps.ready(init);
+            var myMap, myPlacemark;
 
 
-    function init(){ 
+            function init(){
 
-        myMap = new ymaps.Map("map", {
-            center: [55.76, 37.64],
-            zoom: 9
-        });
-        myPlacemark = new ymaps.Placemark([55.66, 37.64], {}, {
-            iconLayout: 'default#image',
-            iconImageHref: 'images/pin.png',
-        iconImageSize: [21, 30],
-        iconImageOffset: [-3, -42]
-    
-        });
+                myMap = new ymaps.Map("map", {
+                    center: [55.76, 37.64],
+                    zoom: 9
+                });
+                myPlacemark = new ymaps.Placemark([55.66, 37.64], {}, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'images/pin.png',
+                    iconImageSize: [21, 30],
+                    iconImageOffset: [-3, -42]
 
-        myMap.geoObjects.add(myPlacemark);
-    }
-</script>
+                });
+
+                myMap.geoObjects.add(myPlacemark);
+            }
+        </script>
         <section id="feedback" class="feedback fullwidth">
             <a name="feedback"></a>
             <h2>Задайте вопрос специалисту банка</h2>
             <div class="feedback-form block">
-              <form action="/echo" method="post">
-                <label for="name-field" class="feed-label">Ваше имя</label>
-                <input type="text" name="name-field" id="name-field"/>
-                <br>
-                <label for="number-field" class="feed-label" value="(495) 123 45 67"><div style="width: 110px;">Телефон</div><div class="phone-code-label">+7</div></label>
-                <input type="text" name="area-info" id="area-field"/>
-                <br>
-                <label for="call-field" class="feed-label">Перезвонить</label>
-                <input type="checkbox" name="now" id="now" checked/>
-                <label for="now">Сейчас</label>
-                <input type="checkbox" name="later" id="later"/>
-                <label for="later">Позже</label>
-                <input type="text" name="calendar" value="10.07.2014" max="2066-06-06" min="2000-01-01" class="date"/>
-                <img id="img-calendar"src="images/calendar.png" width="27px"/>
-                <select id="timefield" class="time">
-                    <option selected>10:00</option>
-                    <option>11:00</option>
-                    <option>12:00</option>
-                    <option>13:00</option>
-                    <option>14:00</option>
-                    <option>15:00</option>
-                </select>
-                <br/>
-                  <label for="area-field"></label>
-                 <textarea name="area-info" type="text" id="area-field" value="Ваш вопрос" rows="5"></textarea>
-                 <br/>
-                 <div class="right">
-                 <input type="button" id="submit" value="Отправить"/>
-                 </div>
+                <form action="/echo" method="post">
+                    <label for="name-field" class="feed-label">Ваше имя</label>
+                    <input type="text" name="name-field" id="name-field"/>
+                    <br>
+                    <label for="number-field" class="feed-label" value="(495) 123 45 67"><div style="width: 110px;">Телефон</div><div class="phone-code-label">+7</div></label>
+                    <input type="text" name="area-info" id="area-field"/>
+                    <br>
+                    <label for="call-field" class="feed-label">Перезвонить</label>
+                    <input type="checkbox" name="now" id="now" checked/>
+                    <label for="now">Сейчас</label>
+                    <input type="checkbox" name="later" id="later"/>
+                    <label for="later">Позже</label>
+                    <input type="text" name="calendar" value="10.07.2014" max="2066-06-06" min="2000-01-01" class="date"/>
+                    <img id="img-calendar"src="images/calendar.png" width="27px"/>
+                    <select id="timefield" class="time">
+                        <option selected>10:00</option>
+                        <option>11:00</option>
+                        <option>12:00</option>
+                        <option>13:00</option>
+                        <option>14:00</option>
+                        <option>15:00</option>
+                    </select>
+                    <br/>
+                    <label for="area-field"></label>
+                    <textarea name="area-info" type="text" id="area-field" value="Ваш вопрос" rows="5"></textarea>
+                    <br/>
+                    <div class="right">
+                        <input type="button" id="submit" value="Отправить"/>
+                    </div>
                 </form>
             </div>
             <div class="call">
-            <h1 >8 800 2000 946</h1>
-       <h2>Позвоните и задайте вопрос по телефону.
-        <br>
-        Звонок по России бесплатный.</h2>
-        <img id="img-24" src="images/247.png"/>
-            <h3 >Колл-центр работает 
-            <br>
-            круглосуточно
-            <br/>
-            и без выходных</h3>
-            <div style="clear:both"/>
-        </div>
-       </section>
-       
-       <!-- <section id="info-block"> -->
+                <h1 >8 800 2000 946</h1>
+                <h2>Позвоните и задайте вопрос по телефону.
+                    <br/>
+                    Звонок по России бесплатный.</h2>
+                <img id="img-24" src="images/247.png"/>
+                <h3 >Колл-центр работает
+                    <br/>
+                    круглосуточно
+                    <br/>
+                    и без выходных</h3>
+                <div style="clear:both"/>
+            </div>
+        </section>
+
+        <!-- <section id="info-block"> -->
 
 
-       <!-- </section> -->
+        <!-- </section> -->
         <footer class="beige-background">
-                <div class="col-1-3"><p>Генеральная лицензия ЦБ РФ №1574
-                    <br>
-                    <b>Система страхования вкладов</b>
-                    <br>
-                    Вклады в банк застрахованы государством
-                    <br>
-                    Свидетельство №95
+            <div class="col-1-3"><p>Генеральная лицензия ЦБ РФ №1574
+                <br/>
+                <b>Система страхования вкладов</b>
+                <br/>
+                Вклады в банк застрахованы государством
+                <br/>
+                Свидетельство №95
                 </p></div>
-                <div class="col-1-3 center"><p>© ОАО КБ "Кедр", 1991-2014</p></div>
-                <div class="col-1-3"><div>
-                    <div class="filler">&nbsp;</div>
-                    <div>
-                    <span class="icon"><img src="images/calculator.png" width="26"></span><a href="#" class="icon-label">Калькулятор вкладов</a><br/>
-                    <span class="icon"><img src="images/map.png" width="30"></span><a href="#" class="icon-label">Отделения в вашем городе</a><br/>
-                    </div>
+            <div class="col-1-3 center"><p>© ОАО КБ "Кедр", 1991-2014</p></div>
+            <div class="col-1-3"><div>
+                <div class="filler">&nbsp;</div>
+                <div>
+                    <span class="icon"><img src="images/calculator.png" width="26"/></span><a href="#" class="icon-label">Калькулятор вкладов</a><br/>
+                    <span class="icon"><img src="images/map.png" width="30"/></span><a href="#" class="icon-label">Отделения в вашем городе</a><br/>
                 </div>
                 </div>
+            </div>
         </footer>
-        </div>
-    </body>
+    </div>
+</body>
 </html>
