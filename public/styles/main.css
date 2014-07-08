@@ -1,5 +1,5 @@
 html, body {
-    background-color:#f4f2ed;
+    background-color: #f4f2ed;
     font-family:'Fira Sans', sans-serif;
     font-size:14px;
     line-height:1.4;
@@ -180,9 +180,10 @@ a.change-currency.selected {
     padding-top: 3px;
     color: white;
     border: 1px #066386 inset;
-    background-color: #066386;
-    background-color: #1a799d;
+    /*background-color: #066386;*/
+    /*background-color: #1a799d;*/
     border-radius: 5px;
+    background-color: #009b3a;
 }
 
 .total {
@@ -271,7 +272,7 @@ header li a {
 
 .outer-tabbar-left, .outer-tabbar-right {
     float: left;
-    width: 380px;
+    width: 328px;
     
     background-color: #ffffff;
     height: 33px;
@@ -397,6 +398,18 @@ header li a {
     background-color: white;
 }
 
+.beige-background {
+    width: 100%;
+    background-color: #f4f2ed;
+}
+
+.feedback h2 {
+    font-weight: 400;
+    font-size: 2.1em;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
 .feedback-form{
     width: 60%;
     display: inline-table;
@@ -446,12 +459,19 @@ label.feed-label div {
     margin-bottom: -9px;
 }
 footer{
-    height: 20px;
-    margin-top: 30px;
-    margin-right: 40px;
-    text-align: right;
-    font-size: 14px;
+    height: 100px;
+/*    margin-top: 30px;
+    margin-right: 40px;*/
+    margin: 0px;
+/*    margin-top: 0;
+    margin-bottom: 0;*/
+    padding: 10px 30px 10px 30px;
+    text-align: left;
+    color: #555555;
+    font-size: 0.9em;
+    /*font-size: 14px;*/
 }
+
 #info-block{
     padding right: 30px;
     margin-right: 60px;
@@ -473,7 +493,7 @@ font-size: 2.8em;
 
 }
 .call h3{
-    margin-top: 26px;
+    margin-top: 18px;
     font-size: 1.6em;
     line-height: 1em;
     vertical-align: middle;
@@ -483,22 +503,3 @@ font-size: 2.8em;
 }
 #img-24{
     float: left;
-}
-#footer1{
-    text-align: left;
-    float: left;
-    margin-left: 20px;
-}
-#footer2{
-    text-align: center;
-}
-#footer3{
-        display: block;
-        text-align: right;
-         margin-right: 10px;
-         margin-bottom: 25px;
-         margin-top: -18px;
-}
-#map img{
-    padding: 20px;
-}
