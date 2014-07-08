@@ -1,5 +1,5 @@
 html, body {
-    background-color:#f4f2ed;
+    background-color: #f4f2ed;
     font-family:'Fira Sans', sans-serif;
     font-size:14px;
     line-height:1.4;
@@ -398,6 +398,11 @@ header li a {
     background-color: white;
 }
 
+.beige-background {
+    width: 100%;
+    background-color: #f4f2ed;
+}
+
 .feedback h2 {
     font-weight: 400;
     font-size: 2.1em;
@@ -457,9 +462,10 @@ footer{
     height: 100px;
 /*    margin-top: 30px;
     margin-right: 40px;*/
-    margin: 20px;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0px;
+/*    margin-top: 0;
+    margin-bottom: 0;*/
+    padding: 10px 30px 10px 30px;
     text-align: left;
     color: #555555;
     font-size: 0.9em;
