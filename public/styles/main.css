@@ -484,3 +484,21 @@ font-size: 2.8em;
 #img-24{
     float: left;
 }
+#footer1{
+    text-align: left;
+    float: left;
+    margin-left: 20px;
+}
+#footer2{
+    text-align: center;
+}
+#footer3{
+        display: block;
+        text-align: right;
+         margin-right: 10px;
+         margin-bottom: 25px;
+         margin-top: -18px;
+}
+#map img{
+    padding: 20px;
+}
