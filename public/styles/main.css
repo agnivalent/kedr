@@ -179,7 +179,7 @@ a.change-currency.selected {
     padding-right:15px;
     padding-top: 3px;
     color: white;
-    border: 1px #066386 inset;
+    border: 1px #009b3a inset;
     /*background-color: #066386;*/
     /*background-color: #1a799d;*/
     border-radius: 5px;
@@ -497,6 +497,28 @@ font-size: 2.8em;
     font-size: 1.6em;
     line-height: 1em;
     vertical-align: middle;
+}
+
+footer .filler {
+    width: 20%;
+    float: left;
+    height: 100px;
+}
+
+footer .icon {
+    /*margin: 5px;*/
+    display: inline-block;
+    width: 33px;
+    margin: 5px;
+    
+    text-align: center;
+
+}
+
+footer .icon-label {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
 }
 #name-field{
     width: 434px;
