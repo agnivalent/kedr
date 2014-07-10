@@ -393,6 +393,16 @@ header li a {
 	width:90px;
 }*/
 
+#offices {
+    padding-top: 20px;
+    
+    /*margin-bottom: 20px;*/
+}
+
+#offices h1 {
+    font-size: 2.5em;
+}
+
 .white-background {
     width: 100%;
     background-color: white;
@@ -408,6 +418,10 @@ header li a {
     font-size: 2.1em;
     margin-left: 20px;
     margin-bottom: 5px;
+}
+
+#feedback {
+    padding-top: 20px;
 }
 
 .feedback-form{
