@@ -545,13 +545,28 @@ padding-bottom: 10px;
 #first-col h1{
     margin-bottom: 40px;
 }
-#second-col h1{
+/*#second-col h1{
     font-size: 2.7em;
-}
-#first-col li{
+}*/
+/*#first-col li{
        margin:20px;
  
 }
 #second-col li{
     margin: 7px;
+}*/
+
+.bank-info li {
+    margin-top: 7px;
+}
+.bank-info h1 {
+    margin-left: 0;
+    margin-top: 30px;
+    font-size: 2.3em;
+}
+
+.bank-info h2 {
+    font-size: 1.8em;
+    font-weight: 400;
+    margin-top:0;
 }
