@@ -107,6 +107,7 @@ ymaps.ready(function() {
         $.get('templates/locations.mst', function(template) {
             var rendered = Mustache.render(template, data);
             $("#locations").html(rendered);
+            changeLocation($('#locations').children()[0]);
         });
 
         $.get('templates/location-offices.mst', function(template) {
@@ -114,6 +115,8 @@ ymaps.ready(function() {
             var rendered = Mustache.render(template, data);
             $("#location-offices").html(rendered);
         });
+
+
     });    
 });
 
