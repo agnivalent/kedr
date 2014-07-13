@@ -33,6 +33,8 @@ var geocodingRequestUrl = function(address) {
 
 var changeLocation = function(element) {
     var locationName = $(element).text();
+    $('#locations .selected').removeClass('selected');
+    $(element).addClass('selected');
     officeCoords = [];
     
     //set map centered on the location
@@ -131,6 +133,9 @@ var selectOffice = function(element) {
 
     //hide all other information blocks
     $('.office-info').addClass('display-none');
+    $('#location-offices .selected').removeClass('selected');
+
+    $(element).parent().addClass('selected');
 
     //display information block
     $(element).next().next().removeClass('display-none');
