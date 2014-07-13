@@ -31,8 +31,8 @@ var geocodingRequestUrl = function(address) {
     return "http://geocode-maps.yandex.ru/1.x/?format=json&amp;geocode=" + address;
 };
 
-var changeLocation = function(a) {
-    var locationName = $(a).text();
+var changeLocation = function(element) {
+    var locationName = $(element).text();
     officeCoords = [];
     
     //set map centered on the location
@@ -57,6 +57,7 @@ var changeLocation = function(a) {
             officeCoords.push(coords);
 
             office['coordinates'] = coords;
+            office['bounds'] = extractBoundsFromGeoObject(geoObject);
 
 
             // myMap.setBounds(extractBoundsFromGeoObject(geoObject));
@@ -73,29 +74,67 @@ var changeLocation = function(a) {
         var myGeoObjects = [];
 
         //set markers on the map for offices
-        $.each(officeCoords, function(i, coord){
-            myGeoObjects[i] = new ymaps.GeoObject({
-                geometry: {
-                    type: "Point",
-                    coordinates: coord
-                }
+        $.each(locationOffices, function(i, office){
+            myGeoObjects[i] = new ymaps.Placemark(office.coordinates,  {
+                balloonContentBody: office.address,
+                balloonContentHeader: office.name
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: "images/pin_inactive.png",
+                s_iconImageHref: "images/pin_inactive.png",
+                a_iconImageHref: "pin_active.png",
+                iconImageSize: [60,80],
+                s_iconImageSize: [60,80],
+                a_iconImageSize: [60,80],
+                balloonOffset: [0,-65],
+                iconImageOffset: [-15,-60],
+                s_iconImageOffset: [-15,-60],
+                a_iconImageOffset: [-15,-65],
+                iconShadowImageOffset: [-15,-60],
+                hideIconOnBalloonOpen: false
             });
+
         });
 
-        var myClusterer = new ymaps.Clusterer();
+        var MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div class="cluster-content">$[properties.geoObjects.length]</div>');
+            
+        var myClusterer = new ymaps.Clusterer({
+            clusterIcons: [{
+                    href: "images/stack.png",
+                    size: [70, 42],
+                    offset: [-35, -21]
+                }],
+                clusterIconContentLayout: MyIconContentLayout,
+                clusterIconImageHref: "images/pin_inactive.png"
+            
+        });
         myClusterer.add(myGeoObjects);  
         myMap.geoObjects.add(myClusterer);
+        // myMap.geoObjects.add(myGeoObjects);
 
 
         //put all offices for location to the side
         $("#location-offices").html(Mustache.render(officesTemplate, currentLocation));
-    });
+    });    
+};
 
-    
+var selectOffice = function(element) {
+    selectedOfficeName = $(element).text();
 
+    selectedOffice = currentLocation.offices.filter(function(val) {
+        return val.name === selectedOfficeName;
+    })[0];
 
-    
-    
+    //set map to display iffice location
+    myMap.setCenter(selectedOffice.coordinates);
+    myMap.setBounds(selectedOffice.bounds);
+
+    //hide all other information blocks
+    $('.office-info').addClass('display-none');
+
+    //display information block
+    $(element).next().next().removeClass('display-none');
+
 };
 
 ymaps.ready(function() {
