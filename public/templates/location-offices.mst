@@ -1,3 +1,14 @@
 {{#offices}}
-<div onclick="javascript:changeLocation(this)" class="location inline">{{name}}</div><br/>
+<div class="inline">
+<div onclick="javascript:selectOffice(this)" class="location inline">{{name}}</div><br/>
+<div class="office-info inline display-none">
+	<hr/>
+	<p>{{address}}</p>
+	<p>{{phone}}</p>
+	{{#operation-time}}
+	<p>{{.}}</p>
+	{{/operation-time}}
+	<hr/>
+</div>
+</div>
 {{/offices}}
