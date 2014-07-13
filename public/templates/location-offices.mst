@@ -1,0 +1,3 @@
+{{#offices}}
+<div onclick="javascript:changeLocation(this)" class="location inline">{{name}}</div><br/>
+{{/offices}}
