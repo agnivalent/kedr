@@ -82,7 +82,7 @@ var changeLocation = function(element) {
                 iconLayout: 'default#image',
                 iconImageHref: "images/pin_inactive.png",
                 s_iconImageHref: "images/pin_inactive.png",
-                a_iconImageHref: "pin_active.png",
+                a_iconImageHref: "images/pin_active.png",
                 iconImageSize: [60,80],
                 s_iconImageSize: [60,80],
                 a_iconImageSize: [60,80],
