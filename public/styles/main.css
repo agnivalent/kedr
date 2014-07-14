@@ -2,7 +2,7 @@
     font-family: Rouble;
     src: url(Rouble.eot);
     src: local('Rouble'), local('Rouble'),
-    url(Rouble.otf) format('opentype');
+    url(rouble.otf) format('opentype');
 }
 
 html, body {
