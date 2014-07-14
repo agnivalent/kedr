@@ -1,3 +1,10 @@
+@font-face {
+    font-family: Rouble;
+    src: url(Rouble.eot);
+    src: local('Rouble'), local('Rouble'),
+    url(Rouble.otf) format('opentype');
+}
+
 html, body {
     background-color: #f4f2ed;
     font-family:'Fira Sans', sans-serif;
@@ -37,6 +44,14 @@ section {
     margin-right: auto;
    width: 960px;
    padding: 0px;
+}
+
+.rouble {
+    font-family: 'Rouble';
+}
+
+.total.rouble {
+    line-height: 75px;
 }
 
 #dep {
@@ -708,4 +723,18 @@ footer .icon-label {
     vertical-align: middle;
     margin-left: 4px;
 
+}
+
+.overlay {
+    position:fixed;
+    display:none; 
+
+    /* color with alpha channel */
+    background-color: rgba(0, 0, 0, 0.7); /* 0.7 = 70% opacity */
+
+    /* stretch to screen edges */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
