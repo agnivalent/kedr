@@ -518,6 +518,7 @@ label.feed-label {
 
 label.feed-label div {
     display: inline-block;
+	color: black;
 }
 
 /*#area-field{
@@ -570,6 +571,7 @@ font-size: 2.8em;
     vertical-align: middle;
 	position: relative; 
 	left:10px;
+	letter-spacing: .04em;
 }
 
 footer p {
