@@ -12,11 +12,11 @@
         <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
         <script src="http://code.jquery.com/jquery-2.1.1.js" type="text/javascript"></script>\
         <script src="scripts/mustache.js" type="text/javascript"></script> 
+        <script src="scripts/jquery-ui-1.11.0.custom/jquery-ui.min.js" type="text/javascript"></script> 
         
         <script src="scripts/templates.js" type="text/javascript"></script> 
         <script src="scripts/map.js" type="text/javascript"></script>  
-
-
+        <script src="scripts/calculator.js" type="text/javascript"></script>  
     </head>
     <body>
         <header>
@@ -44,50 +44,55 @@
             <img id="img-insured" src="images/dep-ins.png" width="158"/>
             <form action="/echo" method="post">
                 <label for="area-field" class="left-label">Я хочу вложить</label>
-                <input type="text" name="area-info" id="area-field" rows="1" cols="10"></input>
-            <a class="change-currency selected" href="#">₷ Рубли</a>
-            <a class="change-currency" href="#">$ Доллары</a>
-            <a class="change-currency" href="#">€ Евро</a>
+                <input type="text" name="area-info" id="calc_summ" value="300 000"></input>
+                <div style="display:none"><select id="calc_currency" name="calc_currency"><option value="0" selected="selected">руб.</option><option value="1">дол.</option><option value="2">евро</option></select></div>
+            <span id="cv_0" class="change-currency selected" href="#" onclick="changeCurrency(this)">₷ Рубли</span>
+            <span id="cv_1" class="change-currency" href="#" onclick="changeCurrency(this)">$ Доллары</span>
+            <span id="cv_2" class="change-currency" href="#" onclick="changeCurrency(this)">€ Евро</span>
             <br/>
-            <label for="time-field" class="left-label">на срок</label>
-            <select id="time-field">
-                <option>2 месяца</option>
-                <option>3 месяца</option>
-                <option>6 месяцев</option>
-                <option>1 год</option>
-                <option selected>1,5 года</option>
-                <option>2 года</option>
+            <label for="calc_time" class="left-label">на срок</label>
+            <select id="calc_time">
+                <option value="65">2 месяца</option>
+                <option value="95">3 месяца</option>
+                <option value="185">6 месяцев</option>
+                <option value="367">1 год</option>
+                <option value="545" selected>1,5 года</option>
+                <option value="730">2 года</option>
             </select>
             <br/>
             <label class="left-label">&nbsp</label>
-            <input type="checkbox" name="part" id="part" checked>
-            <label for="part">Частичное снятие средств без потери процента</label>
+            <input type="checkbox" name="free_take" id="free_take">
+            <label for="free_take">Частичное снятие средств без потери процента</label>
             <br/>
             <label class="left-label">&nbsp</label>
-            <input type="checkbox" name="monthly" id="monthly" checked>
-            <label for="monthly">Ежемесячное пополнение вклада</label>
+            <input type="checkbox" name="free_add" id="free_add">
+            <label for="free_add">Ежемесячное пополнение вклада</label>
             <br/>
+            <div class="newl" style="display: none;">
+                <label class="left-label">Хочу пополнять на</label>
+                <input type="text" id="calc_add" name="calc_add" class="calc_summ" value="30 000"><span id="currency_add">рублей</span>
+            </div>
             <label class="left-label">Доход</label>
-            <input type="radio" name="income" id="deposit" value="deposit">
-            <label for id="deposit"> Накапливать на депозите, увеличивая % годовых </label>
+            <input type="radio" name="income" id="calc_percent_1" value="1">
+            <label for="calc_percent_1"> Накапливать на депозите, увеличивая % годовых </label>
             <br/>
             <label class="left-label">&nbsp</label>
-            <input type="radio" name="income" id="month" value="month" checked>
-            <label for id="month"> Ежемесячно переводить на текущий счёт</label>
+            <input type="radio" name="income" id="calc_percent_2" value="0" checked>
+            <label for="calc_percent_2"> Ежемесячно переводить на текущий счёт</label>
             <br/>
             <hr/>
             <label class="left-label total-label">Вы получите</label>
-            <span class="total">363 920 ₷</span>
+            <span id="calc_result" class="total">363 920</span><span class="total"> ₷</span>
 
             <br/>
             <label class="left-label">&nbsp</label>
-            <label class="info-label">Ваш вклад:</label><a href="#">Сберегательный</a>
+            <label class="info-label">Ваш вклад:</label><a href="#" id='deposit_name'>Сберегательный</a>
             <br/>
             <label class="left-label">&nbsp</label>
-            <label class="info-label">Доход по вкладу:</label><span>63 920 ₷</span>
+            <label class="info-label">Доход по вкладу:</label><span id="deposit_income">63 920 ₷</span>
             <br/>
             <label class="left-label">&nbsp</label>
-            <label class="info-label">Эффективная ставка:</label><span>10,66%</span>
+            <label class="info-label">Эффективная ставка:</label><span id="effective_stake">10,66%</span>
             <br/>
             <div class="center">
                 <input type="button" id="visit-offices-button" value="Посетить наши офисы"/>
@@ -270,7 +275,7 @@
                     <label for="now">Сейчас</label>
                     <input type="checkbox" name="later" id="later"/>
                     <label for="later">Позже</label>
-                    <input type="text" name="calendar" value="10.07.2014" max="2066-06-06" min="2000-01-01" class="date"/>
+                    <input type="text" name="calendar" value="10.07.2014" max="2066-06-06" min="2000-01-01" class="date" id="fb_cdayf" name="date" value="0" type="text" class="hasDatepicker">"/>
                     <img id="img-calendar"src="images/calendar.png" width="27px"/>
                     <select id="timefield" class="time">
                         <option selected>10:00</option>

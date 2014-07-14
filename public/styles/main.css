@@ -169,7 +169,7 @@ input[type=button] {
      display: inline-block;
 }
 
-a.change-currency {
+.change-currency {
     margin-left: 15px;
     text-decoration: none;
     color: black;
@@ -188,6 +188,10 @@ a.change-currency {
     /*background-color: #1a799d;*/
     border-radius: 5px;
     background-color: #009b3a;
+}
+
+#currency_add{
+    margin: 5px;
 }
 
 .total {
