@@ -74,11 +74,11 @@
                 <input type="text" id="calc_add" name="calc_add" class="calc_summ" value="30 000"><span id="currency_add">рублей</span>
             </div>
             <label class="left-label">Доход</label>
-            <input type="radio" name="income" id="calc_percent_1" value="1">
+            <input type="radio" name="income" id="calc_percent_1" value="1" onchange="useCalc()" checked>
             <label for="calc_percent_1"> Накапливать на депозите, увеличивая % годовых </label>
             <br/>
             <label class="left-label">&nbsp</label>
-            <input type="radio" name="income" id="calc_percent_2" value="0" checked>
+            <input type="radio" name="income" id="calc_percent_2" value="0" onchange="useCalc()" >
             <label for="calc_percent_2"> Ежемесячно переводить на текущий счёт</label>
             <br/>
             <hr/>
