@@ -1613,7 +1613,7 @@ $(document).ready(function() {
 
 	$("#fb_cdayf").datepicker({
 			showOn: "button",
-			buttonImage: 'http://www.old.rostbank.ru/sites/all/modules/newlead/images/calc_icon.png',
+			buttonImage: 'images/calendar.png',
 			buttonImageOnly: true,
 			dayNames: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'] ,
 			dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'] ,

@@ -287,15 +287,16 @@ header li a {
     float: left;
     width: 328px;
     
-    background-color: #ffffff;
+    
     height: 33px;
     overflow: hidden;
     position: relative;
     z-index: 10;
+    background-color: #dddddd;
 }
 
-.outer-tabbar-right {
-    background-color: #dddddd;
+#tabbar .near-selected {
+    background-color: #ffffff;
 }
 
 .outer-tabbar-left .outer{
@@ -341,11 +342,18 @@ header li a {
     height: 33px;
 }
 
+#tabs .left-to-active{
+    border-radius: 10px 10px 10px 0;
+}
+
+#tabs .right-to-active{
+    border-radius: 10px 10px 0 10px;
+}
 
 #tabs li {
     float: left;
     background-color: #ddd;
-    border-radius: 10px 10px 0 10px;
+    
     display: block;
     padding: 7px;
     padding-left: 15px;
@@ -693,4 +701,11 @@ footer .icon-label {
 #location-offices .operation-time{
     line-height: 0.7em;
     margin-left: 10px;
+}
+
+.ui-datepicker-trigger {
+    width: 27px;
+    vertical-align: middle;
+    margin-left: 4px;
+
 }

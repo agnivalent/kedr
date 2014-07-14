@@ -15,7 +15,8 @@
         <script src="scripts/jquery-ui-1.11.0.custom/jquery-ui.min.js" type="text/javascript"></script> 
         
         <script src="scripts/templates.js" type="text/javascript"></script> 
-        <script src="scripts/map.js" type="text/javascript"></script>  
+        <script src="scripts/map.js" type="text/javascript"></script> 
+        <script src="scripts/tabs.js" type="text/javascript"></script> 
         <script src="scripts/calculator.js" type="text/javascript"></script>  
     </head>
     <body>
@@ -106,18 +107,18 @@
     </section>
     <section>
         <div id="tabbar" class="fullwidth">
-            <div class="outer-tabbar-left"><div class="outer">&nbsp</div></div>
+            <div class="outer-tabbar-left near-selected"><div class="outer">&nbsp</div></div>
             <div id="tabs">
                 <ul>
-                    <li class="active"><a href="#">Высокий процент</a></li>
-                    <li><a href="#">Гарантии банка</a></li>
+                    <li id="tab-0" class="active first"><span onclick="changeTab(this)">Высокий процент</span></li>
+                    <li id="tab-1" class="right-to-active last"><span onclick="changeTab(this)">Гарантии банка</span></li>
                 </ul>
             </div>
             <div class="outer-tabbar-right"><div class="outer">&nbsp</div></div>
             <div style="clear:both"></div>
         </div>
     </div>
-    <div class="fullwidth block display-none">
+    <div id="tab-0-block" class="fullwidth block">
         <div class="col-1-3" >
             <div class="block-dep-info">
                 <h3>Вклад «Накопительный»</h3>
@@ -154,13 +155,14 @@
                 <img src="images/pdf.png" width="26"/><a href="#">Полные условия вклада «Накопительный»</a>
             </div>
         </div>
+        <div style="clear:both"></div>
     </div>
-    <div class=" fullwidth block">
+    <div id="tab-1-block" class=" fullwidth block display-none">
         <div class="garant">
              <img id="img-ins" src="images/dep-ins.png" width="158"/>
             <h2>Застраховано государством</h2>
             <p>Банк является участником государственной Системы Страхования Вкладов (Свидетельство № 95 от 21.10.2004). Вы можете быть уверены, что государство защитит все ваши вклады и гарантированно вернет вам до 700 000 рублей согласно Федеральному закону «О страховании вкладов физических лиц в банках Российской Федерации» №177-ФЗ от 23 декабря 2003 года.</p>
-            <div style="clear:both"/>
+            <div style="clear:both"></div>
             <div id="img1"><div class="img11"><img src="images/pdf.png" width="26"/></div><a href="#">Лицензия на осуществление
             <br/>
             банковских операций</a></div>
@@ -212,7 +214,7 @@
                 <div id="map"></div>
             </div>
             <div id="location-offices">Выберите город</div>
-            <div style="clear:both"/>
+            <div style="clear:both"></div>
 
         </section>
 
@@ -256,7 +258,7 @@
 
             </div>
          </div> 
-         <div style="clear:both"/>  
+         <div style="clear:both"></div>  
         </section>
         <div class="white-background">
         <section id="feedback" class="feedback fullwidth">
@@ -275,8 +277,8 @@
                     <label for="now">Сейчас</label>
                     <input type="checkbox" name="later" id="later"/>
                     <label for="later">Позже</label>
-                    <input type="text" name="calendar" value="10.07.2014" max="2066-06-06" min="2000-01-01" class="date" id="fb_cdayf" name="date" value="0" type="text" class="hasDatepicker">"/>
-                    <img id="img-calendar"src="images/calendar.png" width="27px"/>
+                    <input type="text" name="calendar" value="10.07.2014" max="2066-06-06" min="2000-01-01" class="date" id="fb_cdayf" name="date" value="0" type="text" class="hasDatepicker">
+                    <!-- <img id="img-calendar"src="images/calendar.png" width="27px"/> -->
                     <select id="timefield" class="time">
                         <option selected>10:00</option>
                         <option>11:00</option>
@@ -305,7 +307,7 @@
                     круглосуточно
                     <br/>
                     и без выходных</h3>
-                <div style="clear:both"/>
+                <div style="clear:both"></div>
             </div>
         </section>
 
