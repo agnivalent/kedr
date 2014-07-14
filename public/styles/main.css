@@ -47,11 +47,10 @@ section {
 
 .rouble {
     font-family: 'Rouble';
-	
 }
 
 .total.rouble {
-    line-height: 75px;
+line-height: 75px;
 }
 
 #dep {
@@ -164,6 +163,15 @@ input[type=text].date {
 }
 
 input[type=button] {
+/*_resetting properties to keep style consistency between browsers_*/
+    -webkit-appearance: none; /*Safari/Chrome*/
+    -moz-appearance: none; /*Firefox*/
+    -ms-appearance: none; /*IE*/
+    -o-appearance: none; /*Opera*/
+    appearance: none;
+/*____*/
+	
+    -webkit-border-radius: 0; 
     border-radius: 5px;
     color: white;
     background-color: #009b3a;
@@ -550,6 +558,8 @@ font-size: 2.8em;
     font-size: 1.6em;
     line-height: 1em;
     vertical-align: middle;
+	position: relative; 
+	left:10px;
 }
 
 footer p {
@@ -605,6 +615,20 @@ footer .icon-label {
 #second-col li{
     margin: 7px;
 }
+
+#second-col h2{
+    margin-bottom: 0px;
+}
+
+#third-col li {
+	margin-bottom: 40px;
+	margin: 7px;
+}
+
+#third-col h1{
+    margin-bottom: 40px;
+}
+
 #img1{
     float:left;
     margin-left: 20%;
@@ -643,7 +667,8 @@ footer .icon-label {
 }
 .bank-info h1 {
     margin-left: 0;
-    margin-top: 30px;
+ /*   margin-top: 30px; */
+	margin-top: 0px;
     font-size: 2.3em;
 }
 
