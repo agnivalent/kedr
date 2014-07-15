@@ -49,9 +49,63 @@ section {
     position: absolute !important;
     margin-left: auto;
     margin-right: auto;
-    width: 700px;
+    width: 800px;
     padding: 0px;
     text-align: center;
+
+    display: block;
+    top: 200px; 
+    left: 7%;
+    padding: 5px; 
+    margin: 10px; 
+    z-index: 12;
+}
+
+.popup .tabs ul {
+    background-size: 500px 33px;
+}
+
+.popup .tabbar .near-selected {
+    background-color: transparent;
+}
+
+.popup .outer-tabbar-left, .popup .outer-tabbar-right {
+    width: 40px;
+    background-color: transparent;
+}
+
+.popup .outer {
+    background-color: transparent !important;
+}
+
+.popup .files a {
+    vertical-align: top;
+    margin: 10px;
+}
+
+.popup .files {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.popup .notes {
+    font-size: 0.9em;
+}
+
+.popup table {
+    font-size: 1.2em;
+    margin-left: 10px;
+
+}
+
+.popup tr {
+    border-bottom: 1px #DDDDDD dotted;
+}
+
+.popup h3 {
+    font-family:'Fira Sans', sans-serif;
+    font-size: 2em;
+    margin-left: 20px;
 }
 
 .rouble {
@@ -59,7 +113,7 @@ section {
 }
 
 .total.rouble {
-line-height: 75px;
+    line-height: 75px;
 }
 
 #dep {
@@ -76,14 +130,14 @@ letter-spacing: .03em;
 }
 
 
-a, a:visited, a:active {
+.link, a, a:visited, a:active {
     color: black;
     text-decoration: none;
     padding-bottom: 0;
     border-bottom: 1px black dashed;
 }
 
-a:hover {
+.link:hover, a:hover {
     border-bottom: 1px black solid;
 }
 
@@ -123,10 +177,16 @@ header {
     display: block-inline;
 }
 
-.right-bottom-corner a {
+.right-bottom-corner a, .right-bottom-corner div {
     vertical-align: top;
     margin: 10px;
 }
+
+.right-bottom-corner div {
+    vertical-align: top;
+    margin-top: 3px;
+}
+
 
 .right-bottom-corner img {
     margin-top: -3px;
@@ -512,6 +572,10 @@ header li a {
     text-align: right;
 }
 
+.left {
+    text-align: left;
+}
+
 .feedback-form textarea {
     width: 576px;
 /*    margin-right: 20px;
@@ -785,4 +849,5 @@ footer .icon-label {
     left: 0;
     bottom: 0;
     right: 0;
+    z-index: 11;
 }
