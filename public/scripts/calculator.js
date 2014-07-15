@@ -34,6 +34,7 @@ var changeCurrency = function(elem) {
 	$("[id^=cv_]").removeClass('selected');
 
 	$(elem).addClass('selected');
+	useCalc();
 }
 
 
@@ -1821,14 +1822,17 @@ function useCalc(){
 	}else{
 		$("#errors").hide();
 		$("#result").show();
-		$("#calc_result").html(number_to_str(deposit.payment));
+		
 		$("#effective_stake").html((deposit.percent).toFixed(2)+"%");
+		var currencyStr;
 		switch (currency){
-			case 0: $("#calc_result_currency").html("<img src='/sites/all/themes/rb/images/rub.png'/>"); $("#deposit_currency").html("руб."); break;
-			case 1: $("#calc_result_currency").html("$"); $("#deposit_currency").html("$"); break;
-			case 2: $("#calc_result_currency").html("€"); $("#deposit_currency").html("€"); break;
+			case 0: currencyStr = "<span class=\"rouble\">a</span>"; $("#deposit_currency").html("руб."); break;
+			case 1: currencyStr = "$"; $("#deposit_currency").html("$"); break;
+			case 2: currencyStr = "€"; $("#deposit_currency").html("€"); break;
 			break;
 		}
+
+		$("#calc_result").html(number_to_str(deposit.payment) + " " + currencyStr);
 		var income = deposit.income;
 		$("#deposit_income").html(number_to_str(income<0?0:income));
 		if (/*time>=365 && */additional.capitalization) {
