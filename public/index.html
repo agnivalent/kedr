@@ -274,12 +274,12 @@
             <a name="feedback"></a>
             <h2>Задайте вопрос специалисту банка</h2>
             <div class="feedback-form block">
-                <form action="/mailer" method="post">
+                <form action="/api/mailer" method="post">
                     <label for="name-field" class="feed-label">Ваше имя</label>
-                    <input type="text" name="name-field" id="name-field"/>
+                    <input type="text" name="name" id="name-field"/>
                     <br>
                     <label for="number-field" class="feed-label" value="(495) 123 45 67"><div style="width: 110px;">Телефон</div><div class="phone-code-label">+7</div></label>
-                    <input type="text" name="area-info" id="area-field"/>
+                    <input type="text" name="phone" id="area-field"/>
                     <br>
                     <label for="call-field" class="feed-label">Перезвонить</label>
                     <input type="checkbox" name="now" id="now" checked/>
@@ -298,7 +298,7 @@
                     </select>
                     <br/>
                     <label for="area-field"></label>
-                    <textarea name="area-info" type="text" id="area-field" value="Ваш вопрос" rows="5"></textarea>
+                    <textarea name="message" type="text" id="area-field" value="Ваш вопрос" rows="5"></textarea>
                     <br/>
                     <div class="right">
                         <input type="submit" id="submit" value="Отправить"/>
