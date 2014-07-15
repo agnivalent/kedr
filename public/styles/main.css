@@ -425,11 +425,14 @@ header li a {
     /*background-color: #bfedf4;*/
     background-color: #eef2f0;
     margin: 5px;
-    padding: 10px;
+    /*padding: 10px;*/
+	padding: 5px;
+	padding-top: 10px;
     padding-bottom: 20px;
     border-radius: 10px;
     text-align: left;
-	min-height: 190px;
+	min-height: 180px;
+	line-height: 20px;
     
 }
 
@@ -439,13 +442,18 @@ header li a {
 
 .block-dep-info img {
     float: left;
-    margin-left: 5px;
+    margin-left: 10px;
+	position:relative;
+	top:5px;
 }
 
 .block-dep-info h3 {
     text-align: center;
 }
 
+
+.block-dep-info hr {
+}
 .block-dep-info a {
     /*font-size: 0.9em;*/
     font-family: 'PT Sans Narrow';
@@ -453,7 +461,7 @@ header li a {
     vertical-align: center;
 	margin-left:20px;
 	position:relative;
-	top:8px;
+	top:10px;
 }
 
 .outer-tabbar-left, .outer-tabbar-right {
@@ -640,19 +648,22 @@ header li a {
 
 .right {
     text-align: right;
-}
+/* лишний отступ в 5px для ie */	
+	margin-top: 5px;
+/*______________________________*/
+	}
 
 .left {
     text-align: left;
 }
 
 .feedback-form textarea {
-    width: 576px;
-/*    margin-right: 20px;
-*/}
+    width: 570px;
+/*    margin-right: 20px;*/
+	}
 
 label.feed-label {
-    width: 130px;
+    width: 120px;
     /*text-align: right;*/
     font-size: 1.2em;
     display: inline-block;
@@ -741,7 +752,7 @@ footer .icon-label {
     margin-top: 5px;
 }
 #name-field{
-    width: 434px;
+    width: 436px;
 }
 #img-24{
     float: left;
