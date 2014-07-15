@@ -79,7 +79,7 @@ section {
 }
 
 .popup .outer-tabbar-left, .popup .outer-tabbar-right {
-    width: 40px;
+    width: 80px;
     background-color: transparent;
 }
 
@@ -115,6 +115,25 @@ section {
     font-family:'Fira Sans', sans-serif;
     font-size: 2em;
     margin-left: 20px;
+}
+
+.popup .var {
+    margin: 5px 0 10px 10px;
+    padding-top: 3px;
+
+}
+
+.popup .var.active {
+        color: white;
+    border: 1px #009b3a inset;
+    padding-left: 10px;
+    padding-right: 10px;
+
+
+    /*background-color: #066386;*/
+    /*background-color: #1a799d;*/
+    border-radius: 5px;
+    background-color: #009b3a;
 }
 
 .rouble {
