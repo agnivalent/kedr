@@ -12,7 +12,7 @@ post '/mailer' do
 
 	message = "#{params[:name]} просит связаться по телефону #{params[:phone]} "
 		
-	message << (params[:now].to_s == "true") ? "сейчас" : "#{params[:calendar]} в #{params[:time]}"
+	message << ((params[:now].to_s == "true")? "сейчас" : "#{params[:calendar]} в #{params[:time]}")
 	message << "\n"
 	message << "Сообщение: #{params[:message]}"
 	
