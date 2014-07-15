@@ -111,17 +111,34 @@ section {
 .popup table {
     font-size: 1.2em;
     margin-left: 10px;
-
+    border-collapse: collapse;
+    -webkit-border-horizontal-spacing: 2px;
+    -webkit-border-vertical-spacing: 2px;
 }
 
-.popup tr {
-    border-bottom: 1px #DDDDDD dotted;
+.popup thead th, .popup tr.last_row td {
+    /*padding: 2px 0;*/
+    border-bottom: 1px #DDDDDD solid;
+    padding-bottom: 10px;
+}
+
+.popup tr td {
+    padding: 5px;
+}
+
+.popup tr.last_row td {
+    padding-left: 10px;
 }
 
 .popup h3 {
     font-family:'Fira Sans', sans-serif;
     font-size: 2em;
-    margin-left: 20px;
+    margin: 20px;
+}
+
+.popup .subtitle {
+    font-size: 1.5em;
+    margin: 0 0px 10px 20px;
 }
 
 .popup .var {

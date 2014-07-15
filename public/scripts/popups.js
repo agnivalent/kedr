@@ -6,15 +6,15 @@ var toggleDepositPopup = function(tab) {
 }
 
 var changeVarToNormal = function(elem) {
-	$(".popup .var").removeClass('active');
+	$("#popup-tab-0-block .var").removeClass('active');
 	$(elem).addClass('active');
-	$(".popup .short").hide();
-	$(".popup .normal").show();
+	$("#popup-tab-0-block .short").hide();
+	$("#popup-tab-0-block .normal").show();
 }
 
 var changeVarToShort = function(elem) {
-	$(".popup .var").removeClass('active');
+	$("#popup-tab-0-block .var").removeClass('active');
 	$(elem).addClass('active');
-	$(".popup .short").show();
-	$(".popup .normal").hide();
+	$("#popup-tab-0-block .short").show();
+	$("#popup-tab-0-block .normal").hide();
 }
