@@ -46,6 +46,15 @@ section {
    padding: 0px;
 }
 
+.popup {
+    position: absolute !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    padding: 0px;
+    text-align: center;
+}
+
 .rouble {
     font-family: 'Rouble';
 }
@@ -310,7 +319,7 @@ header li a {
     background-color: #dddddd;
 }
 
-#tabbar .near-selected {
+.tabbar .near-selected {
     background-color: #ffffff;
 }
 
@@ -328,19 +337,19 @@ header li a {
     height: 33px;
 }
 
-#tabbar {
+.tabbar {
     height: 33px;
     text-align: center;
     /*margin: auto;*/
     /*display: inline-block;*/
 }
 
-#tabs {
+.tabs {
     /*width: 400px;*/
     margin-top: 30px;
 }
 
-#tabs ul{    
+.tabs ul{    
     padding: 0px !important;
     float: left;
     list-style-type: none;
@@ -357,15 +366,15 @@ header li a {
     height: 33px;
 }
 
-#tabs .left-to-active{
+.tabs .left-to-active{
     border-radius: 10px 10px 10px 0;
 }
 
-#tabs .right-to-active{
+.tabs .right-to-active{
     border-radius: 10px 10px 0 10px;
 }
 
-#tabs li {
+.tabs li {
     float: left;
     background-color: #ddd;
     
@@ -375,12 +384,12 @@ header li a {
     padding-right: 15px;
 }
 
-#tabs a {
+.tabs a {
     border: none;
     padding: 0px;
 }
 
-#tabs .active {  
+.tabs .active {  
     border-radius: 10px 10px 0 0;  
     background-color: #ffffff;
 }

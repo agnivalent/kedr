@@ -85,7 +85,7 @@
             <br/>
             <hr/>
             <label class="left-label total-label">Вы получите</label>
-            <span id="calc_result" class="total">363 920</span><span class="total rouble">o</span>
+            <span id="d" class="total">363 920 <span class="rouble">o</span></span>
 
             <br/>
             <label class="left-label">&nbsp</label>
@@ -108,9 +108,9 @@
         </form>
     </section>
     <section>
-        <div id="tabbar" class="fullwidth">
+        <div class="tabbar fullwidth">
             <div class="outer-tabbar-left near-selected"><div class="outer">&nbsp</div></div>
-            <div id="tabs">
+            <div class="tabs">
                 <ul>
                     <li id="tab-0" class="active first"><span onclick="changeTab(this)">Высокий процент</span></li>
                     <li id="tab-1" class="right-to-active last"><span onclick="changeTab(this)">Гарантии банка</span></li>
@@ -339,10 +339,26 @@
     </div>
 
     <script id="locations-template" type="x-tmpl-mustache">
-{{#locations}}
-<a href="#" onclick="changeLocation" class="locations">{{name}}</a>
-{{/locations}}
+// {{#locations}}
+// <a href="#" onclick="changeLocation" class="locations">{{name}}</a>
+// {{/locations}}
     </script>
     <div class="overlay"></div>
+
+    <div id="deposit-popup" class="popup display-none block">
+        <div class="tabbar">
+            <div class="outer-tabbar-left near-selected"><div class="outer">&nbsp</div></div>
+            <div class="tabs">
+                <ul>
+                    <li id="tab-0" class="active first"><span onclick="changeTab(this)">Высокий процент</span></li>
+                    <li id="tab-1" class="right-to-active last"><span onclick="changeTab(this)">Гарантии банка</span></li>
+                </ul>
+            </div>
+            <div class="outer-tabbar-right"><div class="outer">&nbsp</div></div>
+            <div style="clear:both"></div>
+        </div>
+        <div id="tab-0-block" class="block">
+        </div>
+    </div>
 </body>
 </html>
