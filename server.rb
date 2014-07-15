@@ -16,8 +16,8 @@ post '/mailer' do
 	message << "\n"
 	message << "Сообщение: #{params[:message]}"
 	
-  	Pony.mail(:to => 'agnivalent@gmail.com',
-            :from => 'no-reply@kedr.ru',
+  	Pony.mail(:to => 'info@kedrbank.com',
+            :from => 'no-reply@kedrbank.com',
             :subject => "Обратная связь: #{params[:name]}",
 			:via => :sendmail,
   			:via_options => {
