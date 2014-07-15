@@ -78,6 +78,13 @@ section {
     background-color: transparent;
 }
 
+.popup .tabs .right-to-active {
+ border-radius: 10px 10px 0 0; 
+}
+.popup .tabs .left-to-active {
+ border-radius: 10px 10px 0 0; 
+}
+
 .popup .outer-tabbar-left, .popup .outer-tabbar-right {
     width: 80px;
     background-color: transparent;
