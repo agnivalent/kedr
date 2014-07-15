@@ -291,7 +291,7 @@ input[type=text].date {
     width: 120px;
 }
 
-input[type=button] {
+input[type=button], input[type=submit]  {
 /*_resetting properties to keep style consistency between browsers_*/
     -webkit-appearance: none; /*Safari/Chrome*/
     -moz-appearance: none; /*Firefox*/
