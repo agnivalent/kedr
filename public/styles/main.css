@@ -11,7 +11,7 @@ html, body {
     font-size:14px;
     line-height:1.4;
     margin: 0px;
-    margin-top: -8px;
+    margin-top: -10px;
     text-align: center;
 }
 
@@ -23,7 +23,6 @@ h1 {
     font-size: 3.0em;
     font-weight: 500;
     margin-bottom: 0;
-
     margin-left: 30px;
 }
 
@@ -59,9 +58,9 @@ section {
     font-family: 'Rouble';
 }
 
-/*.total.rouble {
-    line-height: 75px;
-}*/
+.total.rouble {
+line-height: 75px;
+}
 
 #dep {
     padding-top: 130px;
@@ -71,6 +70,11 @@ section {
     background-repeat: no-repeat;
     background-position: right bottom;
 }
+
+#dep h3 {
+letter-spacing: .03em;
+}
+
 
 a, a:visited, a:active {
     color: black;
@@ -149,13 +153,14 @@ label.left-label {
 input[type=text], textarea, select{
     border-radius: 5px;
     
-
     line-height:23px;
     border: 1px solid #009b3a;
-    background-color: #64df77;
+ /* background-color: #64df77; */
+	background-color: #ffffff;
     padding-left: 10px;
     font-size: 1.05em;
-    color: white;
+/*    color: white; */
+	color: black;
 }
 
 input[type=text], select{
@@ -173,6 +178,15 @@ input[type=text].date {
 }
 
 input[type=button] {
+/*_resetting properties to keep style consistency between browsers_*/
+    -webkit-appearance: none; /*Safari/Chrome*/
+    -moz-appearance: none; /*Firefox*/
+    -ms-appearance: none; /*IE*/
+    -o-appearance: none; /*Opera*/
+    appearance: none;
+/*____*/
+	
+    -webkit-border-radius: 0; 
     border-radius: 5px;
     color: white;
     background-color: #009b3a;
@@ -231,8 +245,9 @@ input[type=button] {
 select {
     height:28px;
     width: 183px !important;
-    background: url(../images/dropdown-arrow.svg) no-repeat right center #64df77;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoKIDxtZXRhZGF0YT5pbWFnZS9zdmcreG1sPC9tZXRhZGF0YT4KIDxnPgogIDx0aXRsZT5iYWNrZ3JvdW5kPC90aXRsZT4KICA8cmVjdCBmaWxsPSJub25lIiBpZD0iY2FudmFzX2JhY2tncm91bmQiIGhlaWdodD0iNDAyIiB3aWR0aD0iNTgyIiB5PSItMSIgeD0iLTEiLz4KIDwvZz4KIDxnPgogIDx0aXRsZT5MYXllciAxPC90aXRsZT4KICA8ZyBpZD0ic3ZnXzEiIGZpbGw9IiNmZmYiIGNsYXNzPSJ1aS1kcm9wZG93bi1zdmciPgogICA8cGF0aCBmaWxsPSIjMDA5YjNhIiBpZD0ic3ZnXzIiIGQ9Im0xLjUsMC40OWw2LjQ5LDQuOTlsNi40OSwtNC45OWwwLDMuOTlsLTYuNTA5OTk5LDQuOTlsLTYuNDksLTQuOTlsMC4wMiwtMy45OXoiLz4KICAgPHBhdGggZmlsbD0iIzAwOWIzYSIgaWQ9InN2Z18zIiBkPSJtMS40OCw2LjUybDYuNDksNC45ODk5OTlsNi40OSwtNC45ODk5OTlsMCwzLjk4OTk5OWwtNi41Myw0Ljk0MDAwMWwtNi40OSwtNC45NDAwMDFsMC4wNCwtMy45ODk5OTl6Ii8+CiAgPC9nPgogPC9nPgo8L3N2Zz4=) no-repeat right center #ffffff;
     background-size: 15px;
+	background-position: 98%;
     -webkit-appearance: none;
 }
 
@@ -284,6 +299,7 @@ header li a {
     padding-bottom: 20px;
     border-radius: 10px;
     text-align: left;
+	min-height: 180px;
     
 }
 
@@ -305,6 +321,9 @@ header li a {
     font-family: 'PT Sans Narrow';
     margin: 5px;
     vertical-align: center;
+	margin-left:20px;
+	position:relative;
+	top:8px;
 }
 
 .outer-tabbar-left, .outer-tabbar-right {
@@ -508,6 +527,7 @@ label.feed-label {
 
 label.feed-label div {
     display: inline-block;
+	color: black;
 }
 
 /*#area-field{
@@ -558,6 +578,9 @@ font-size: 2.8em;
     font-size: 1.6em;
     line-height: 1em;
     vertical-align: middle;
+	position: relative; 
+	left:10px;
+	letter-spacing: .04em;
 }
 
 footer p {
@@ -608,11 +631,25 @@ footer .icon-label {
 }*/
 #first-col li{
        margin:20px;
- 
+	   
 }
 #second-col li{
     margin: 7px;
 }
+
+#second-col h2{
+    margin-bottom: 0px;
+}
+
+#third-col li {
+	margin-bottom: 40px;
+	margin: 7px;
+}
+
+#third-col h1{
+    margin-bottom: 40px;
+}
+
 #img1{
     float:left;
     margin-left: 20%;
@@ -651,7 +688,8 @@ footer .icon-label {
 }
 .bank-info h1 {
     margin-left: 0;
-    margin-top: 30px;
+ /*   margin-top: 30px; */
+	margin-top: 0px;
     font-size: 2.3em;
 }
 
@@ -702,6 +740,7 @@ footer .icon-label {
     color: black !important;
     /*background-color: #64df77;*/
     background-color: #eef2f0;
+	line-height:130%;
 /*    padding-left: 10px;
     font-size: 1.05em;
     color: white;*/
