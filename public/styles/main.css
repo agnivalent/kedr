@@ -45,6 +45,15 @@ section {
    padding: 0px;
 }
 
+#calculator {
+    min-height: 360px;
+}
+
+#errors {
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
 .popup {
     position: absolute !important;
     margin-left: auto;

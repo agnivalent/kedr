@@ -29,7 +29,7 @@
             <div id="menu">
                 <nav>
                     <ul>
-                        <li><a href="#dep"> Вклады </a></li>
+                        <li><a href="#deposits">Вклады</a></li>
                         <li><a href="#calculator">Калькулятор</a></li>
                         <li><a href="#info">О банке</a></li>
                         <li><a href="#offices">Отделения</a></li>
@@ -86,9 +86,9 @@
             <label for="calc_percent_2"> Ежемесячно переводить на текущий счёт</label>
             <br/>
             <hr/>
+            <div id="result">
             <label class="left-label total-label">Вы получите</label>
-            <span id="d" class="total">363 920 <span class="rouble">o</span></span>
-
+            <span id="calc_result" class="total">363 920 <span class="rouble">o</span></span>
             <br/>
             <label class="left-label">&nbsp</label>
             <label class="info-label">Ваш вклад:</label><a href="#" id='deposit_name'>Сберегательный</a>
@@ -99,17 +99,21 @@
             <label class="left-label">&nbsp</label>
             <label class="info-label">Эффективная ставка:</label><span id="effective_stake">10,66%</span>
             <br/>
+            </div>
+            <div id="errors" class="newfont2" style="display: none;"></div>
             <div class="center">
                 <input type="button" id="visit-offices-button" value="Посетить наши офисы"/>
             </div>
             <div class="right-bottom-corner">
                 <span><img src="images/printer.png" width="26"></span><a href="#">Распечатать результаты</a><br/>
-                <span><img src="images/pdf.png" width="23"></span><div class="link inline" onclick="toggleDepositPopup()">Сравнить условия вкладов</div><br/>
-                <span><img src="images/chat.png" style="margin-top: 3px;" width="26"></span><a href="#">Задать вопрос специалисту</a>
+                <span><img src="images/pdf.png" width="23"></span><div class="link inline" onclick="toggleDepositPopup(0)">Сравнить условия вкладов</div><br/>
+                <span><img src="images/chat.png" style="margin-top: 3px;" width="26"></span><a href="#feedback">Задать вопрос специалисту</a>
             </div>
         </form>
     </section>
+     <a name="deposits"></a>
     <section>
+
         <div class="tabbar fullwidth">
             <div class="outer-tabbar-left near-selected"><div class="outer">&nbsp</div></div>
             <div class="tabs">
@@ -123,6 +127,7 @@
         </div>
     </div>
     <div id="tab-0-block" class="fullwidth block">
+        
         <div class="col-1-3" >
             <div class="block-dep-info">
                 <h3>Вклад «Накопительный»</h3>
@@ -332,8 +337,8 @@
             <div class="col-1-3"><div>
                 <div class="filler">&nbsp;</div>
                 <div>
-                    <span class="icon"><img src="images/calculator.png" width="26"/></span><a href="#" class="icon-label">Калькулятор вкладов</a><br/>
-                    <span class="icon"><img src="images/map.png" width="30"/></span><a href="#" class="icon-label">Отделения в вашем городе</a><br/>
+                    <span class="icon"><img src="images/calculator.png" width="26"/></span><a href="#calculator" class="icon-label">Калькулятор вкладов</a><br/>
+                    <span class="icon"><img src="images/map.png" width="30"/></span><a href="#offices" class="icon-label">Отделения в вашем городе</a><br/>
                 </div>
                 </div>
             </div>

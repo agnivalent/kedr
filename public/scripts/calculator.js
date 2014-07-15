@@ -1219,7 +1219,9 @@ $(document).ready(function() {
 	// $("#deposit_name").live("click", function (){
 	$("#deposit_name").click(function (){
 		var id = $(this).attr("class");
-		$("#"+id).click();
+		// $("#"+id).click();
+		var tab = (parseInt(id.slice(-1)) - 1);
+		toggleDepositPopup(""+ tab);
 	});
 	// $(".dep_info_link").live("click", function (){
 	$(".dep_info_link").click(function (){
