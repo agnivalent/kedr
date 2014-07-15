@@ -164,8 +164,10 @@ section {
     font-family: 'Rouble';
 }
 
-.total.rouble {
-    line-height: 75px;
+.total img {
+    vertical-align: middle;
+    margin-top:23px;
+    height: 45px;
 }
 
 #dep {

@@ -1826,7 +1826,7 @@ function useCalc(){
 		$("#effective_stake").html((deposit.percent).toFixed(2)+"%");
 		var currencyStr;
 		switch (currency){
-			case 0: currencyStr = "<span class=\"rouble\">a</span>"; $("#deposit_currency").html("руб."); break;
+			case 0: currencyStr = "<img src=\"images/ruble.svg\" height=\"50\">"; $("#deposit_currency").html("руб."); break;
 			case 1: currencyStr = "$"; $("#deposit_currency").html("$"); break;
 			case 2: currencyStr = "€"; $("#deposit_currency").html("€"); break;
 			break;
