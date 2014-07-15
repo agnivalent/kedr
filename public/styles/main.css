@@ -165,7 +165,7 @@ section {
 }
 
 .total img {
-    vertical-align: middle;
+    vertical-align: top;
     margin-top:23px;
     height: 45px;
 }
