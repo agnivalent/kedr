@@ -1555,38 +1555,38 @@ $(document).ready(function() {
 	// var pos2 = $('#info_content').position().top-310;
 	// var pos3 = $('#contacts_wrap').position().top-80;
 	// var pos4 = $('#bank_info').position().top-110;
-	$(window).scroll(function () {
-		var html;
-		// if ($.browser.safari) {
-		// 	html = document.body;
- 	// 	} else {
-			html = document.documentElement;
-		// }
-		var bodyheight = $('body').height();
-		var windowheight = $(window).height();
-		// if ($.browser.opera) windowheight = html.clientHeight;
-		var scrollheight = html.scrollTop;
+	// $(window).scroll(function () {
+	// 	var html;
+	// 	// if ($.browser.safari) {
+	// 	// 	html = document.body;
+ // 	// 	} else {
+	// 		html = document.documentElement;
+	// 	// }
+	// 	var bodyheight = $('body').height();
+	// 	var windowheight = $(window).height();
+	// 	// if ($.browser.opera) windowheight = html.clientHeight;
+	// 	var scrollheight = html.scrollTop;
 
-		if (scrollheight < 100){$(".hmenu span").removeClass("active");}
-		else
-		if (scrollheight < pos2){$(".hmenu span").removeClass("active"); $("#link2").addClass("active");}
-		else
-		if (scrollheight < pos3){
-			$(".hmenu span").removeClass("active"); 
-			if ($("#tab1").hasClass("active")){$("#link1").addClass("active");}
-			if ($("#tab3").hasClass("active")){$("#link3").addClass("active");}
-		}
-		else
-		if (scrollheight < pos4){$(".hmenu span").removeClass("active"); $("#link5").addClass("active");}
-		else
-		if (scrollheight < pos1){$(".hmenu span").removeClass("active"); $("#link4").addClass("active");}
+	// 	if (scrollheight < 100){$(".hmenu span").removeClass("active");}
+	// 	else
+	// 	if (scrollheight < pos2){$(".hmenu span").removeClass("active"); $("#link2").addClass("active");}
+	// 	else
+	// 	if (scrollheight < pos3){
+	// 		$(".hmenu span").removeClass("active"); 
+	// 		if ($("#tab1").hasClass("active")){$("#link1").addClass("active");}
+	// 		if ($("#tab3").hasClass("active")){$("#link3").addClass("active");}
+	// 	}
+	// 	else
+	// 	if (scrollheight < pos4){$(".hmenu span").removeClass("active"); $("#link5").addClass("active");}
+	// 	else
+	// 	if (scrollheight < pos1){$(".hmenu span").removeClass("active"); $("#link4").addClass("active");}
 		
-		if ((bodyheight - windowheight - scrollheight < 300)&&(ScrollCounter == 0)) {
-			ScrollCounter = ScrollCounter + 1;
-			// _gaq.push(['_trackEvent', 'Action', 'ScrollPage', 'Deposit_ScrollPage']);
-			if (window.yaCounter4395838) yaCounter4395838.reachGoal('/scrollpage'); return true;
-		}
-    });
+	// 	if ((bodyheight - windowheight - scrollheight < 300)&&(ScrollCounter == 0)) {
+	// 		ScrollCounter = ScrollCounter + 1;
+	// 		// _gaq.push(['_trackEvent', 'Action', 'ScrollPage', 'Deposit_ScrollPage']);
+	// 		if (window.yaCounter4395838) yaCounter4395838.reachGoal('/scrollpage'); return true;
+	// 	}
+ //    });
 
 	/*$('.city-name-zel span').click(function() {
 		openmap('msk-zel');
