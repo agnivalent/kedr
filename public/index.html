@@ -147,10 +147,10 @@
                 <ul>
                     <li>Выгодная ставка в рублях до 9,7% на длительный срок</li>
                     <li>Ежемесячная капитализация</li>
-                    <li>Возможна пролонгация вклада</li><br>
+                    <li>Возможна пролонгация вклада</li>
                 </ul>
-                <hr/>
-                <img src="images/pdf.png" width="26"/><a href="pdf/kedr_deposit_sberegat.pdf">Полные условия вклада «Сберегательный»</a>
+                <div><hr/>
+                <img src="images/pdf.png" width="26"/><a href="pdf/kedr_deposit_sberegat.pdf">Полные условия вклада «Сберегательный»</a></div>
             </div>
         </div>
         <div class="col-1-3">
@@ -159,7 +159,7 @@
                 <ul>
                     <li>Размер ставки зависит от неснижаемого остатка на вкладе</li>
                     <li>Частичное снятие в любое время</li>
-                    <li>Выплата процентов в конце срока</li><br>
+                    <li>Выплата процентов в конце срока</li>
                 </ul>
                 <hr/>
                 <img src="images/pdf.png" width="26"/><a href="pdf/kedr_deposit_universal.pdf">Полные условия вклада «Универсальный»</a>
@@ -279,8 +279,8 @@
                     <label for="name-field" class="feed-label">Ваше имя</label>
                     <input type="text" name="name" id="name-field"/>
                     <br>
-                    <label for="number-field" class="feed-label" value="(495) 123 45 67"><div style="width: 110px;">Телефон</div><div class="phone-code-label">+7</div></label>
-                    <input type="text" name="phone" id="area-field"/>
+                    <label for="number-field" class="feed-label" value="(495) 123 45 67"><div style="width: 110px;">Телефон</div><!-- <div class="phone-code-label">+7</div> 	--></label>
+                    <input type="text" name="phone" value="+7" id="area-field"/>
                     <br>
                     <label for="call-field" class="feed-label">Перезвонить</label>
                     <input type="radio" name="now" id="now" value="true" checked/>
@@ -337,8 +337,8 @@
             <div class="col-1-3 center"><p>© ОАО КБ "Кедр", 1991-2014</p></div>
             <div class="col-1-3"><div>
                 <div class="filler">&nbsp;</div>
-                <div>
-                    <span class="icon"><img src="images/calculator.png" width="26"/></span><a href="#calculator" class="icon-label">Калькулятор вкладов</a><br/>
+                <div id="foot">
+                    <span class="icon" ><img src="images/calculator.png" width="26"/></span><a href="#calculator" class="icon-label">Калькулятор вкладов</a><br/>
                     <span class="icon"><img src="images/map.png" width="30"/></span><a href="#offices" class="icon-label">Отделения в вашем городе</a><br/>
                 </div>
                 </div>
