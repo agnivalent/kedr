@@ -701,7 +701,12 @@ footer{
     padding-top: 10px;
     /*font-size: 14px;*/
 }
+.ui-datepicker-trigger {  
 
+	height: 26px;
+    width: 26px;
+
+}
 
 #foot {
 float:right; 
@@ -856,10 +861,11 @@ footer .icon-label {
 }
 
 #locations {
-    text-align: center;
+    text-align: left;
     cursor: pointer;
     font-size: 1.2em;
     margin: 10px;
+	margin-left: -2px;
 }
 
 .location {
