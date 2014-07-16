@@ -32,6 +32,7 @@ var geocodingRequestUrl = function(address) {
 };
 
 var changeLocation = function(element) {
+    setTimeout(changeLocation,1000);
     var locationName = $(element).text();
     $('#locations .selected').removeClass('selected');
     $(element).addClass('selected');
@@ -39,6 +40,7 @@ var changeLocation = function(element) {
     
     //set map centered on the location
     setMapForAddress(locationName);
+
 
     currentLocation = offices.locations.filter(function(val) {
         return val.name === locationName;
