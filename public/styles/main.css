@@ -196,12 +196,13 @@ section {
 }
 
 #dep h1 {
-margin-left:0px;
+margin-left:-3px;
 text-align: left;
 }
 
 #dep h3 {
 letter-spacing: .03em;
+ text-align: left;
 }
 
 .link, a, a:visited, a:active {
