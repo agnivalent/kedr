@@ -31,8 +31,28 @@ var geocodingRequestUrl = function(address) {
     return "http://geocode-maps.yandex.ru/1.x/?format=json&amp;geocode=" + address;
 };
 
+// var stupidFilter = function(locations, name) {
+//     for(var i; i < locations.length; i++ ) {
+//         if (locations[i].name == name) {
+//             return locations[i];
+//         }
+//     }
+// }
+
+
+var stupidFilter = function(locations, name) {
+    var res;
+    locations.forEach(function(element, i, a) {
+        if(element.name == name) {
+            res = element; 
+
+        }
+    });
+    return res
+};
+
 var changeLocation = function(element) {
-    setTimeout(changeLocation,1000);
+    // setTimeout(changeLocation,1000);
     var locationName = $(element).text();
     $('#locations .selected').removeClass('selected');
     $(element).addClass('selected');
@@ -42,9 +62,11 @@ var changeLocation = function(element) {
     setMapForAddress(locationName);
 
 
-    currentLocation = offices.locations.filter(function(val) {
-        return val.name === locationName;
-    })[0];
+    // currentLocation = offices.locations.filter(function(val) {
+    //     return val.name === locationName;
+    // })[0];
+
+    currentLocation = stupidFilter(offices.locations, locationName);
 
     var locationOffices = currentLocation.offices;
 
