@@ -195,10 +195,14 @@ section {
     background-position: right bottom;
 }
 
+#dep h1 {
+margin-left:0px;
+text-align: left;
+}
+
 #dep h3 {
 letter-spacing: .03em;
 }
-
 
 .link, a, a:visited, a:active {
     color: black;
