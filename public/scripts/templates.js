@@ -219,11 +219,11 @@ ymaps.ready(function() {
         // var template = $.get('#locations-template').html(); 
         offices = data;
 
-        $.get('templates/location-offices.mst', function(template) {
+        $.ajax({url: 'templates/location-offices.mst', async: false, success: function(template) {
             officesTemplate = template;
             var rendered = Mustache.render(template, data);
             $("#location-offices").html(rendered);
-        });      
+        }});      
 
         $.get('templates/locations.mst', function(template) {
             var rendered = Mustache.render(template, data);
