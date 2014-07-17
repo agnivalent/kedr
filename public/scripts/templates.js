@@ -52,7 +52,10 @@ var stupidFilter = function(locations, name) {
 };
 
 var changeLocation = function(element) {
-    // setTimeout(changeLocation,1000);
+    if (offices == null) {
+        setTimeout(changeLocation,1000);
+    }
+    
     var locationName = $(element).text();
     $('#locations .selected').removeClass('selected');
     $(element).addClass('selected');
@@ -71,10 +74,12 @@ var changeLocation = function(element) {
     var locationOffices = currentLocation.offices;
 
     var ajaxes = [];
+    var myGeoObjects = [];
     // var officeGeoObjects = [];
     $.each(locationOffices, function(i, office) {
         var xhr = $.ajax({
             url: geocodingRequestUrl(office.address),
+            async: false,
             dataType: 'json'
         }).done(function(data) {
             // officeCoords.push(data.response);
@@ -88,19 +93,6 @@ var changeLocation = function(element) {
 
             // myMap.setBounds(extractBoundsFromGeoObject(geoObject));
             // if (i == locationOffices.length-1) elaborate(officeCoords);
-        });
-        ajaxes.push(xhr);
-    });
-
-    $.when.apply(null, ajaxes).done(function() {
-        // $.each(officeCoords, function(i, office) {
-
-        // });
-
-        var myGeoObjects = [];
-
-        //set markers on the map for offices
-        $.each(locationOffices, function(i, office){
             myGeoObjects[i] = new ymaps.Placemark(office.coordinates,  {
                 balloonContentBody: office.address,
                 balloonContentHeader: office.name
@@ -120,8 +112,12 @@ var changeLocation = function(element) {
                 hideIconOnBalloonOpen: false
             });
 
-        });
 
+        });
+        ajaxes.push(xhr);
+    });
+
+    
         var MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div class="cluster-content">$[properties.geoObjects.length]</div>');
             
         var myClusterer = new ymaps.Clusterer({
@@ -141,7 +137,57 @@ var changeLocation = function(element) {
 
         //put all offices for location to the side
         $("#location-offices").html(Mustache.render(officesTemplate, currentLocation));
-    });    
+
+    // $.when.apply(null, ajaxes).done(function() {
+    //     // $.each(officeCoords, function(i, office) {
+
+    //     // });
+
+    //     var myGeoObjects = [];
+
+    //     //set markers on the map for offices
+    //     $.each(locationOffices, function(i, office){
+    //         myGeoObjects[i] = new ymaps.Placemark(office.coordinates,  {
+    //             balloonContentBody: office.address,
+    //             balloonContentHeader: office.name
+    //         }, {
+    //             iconLayout: 'default#image',
+    //             iconImageHref: "images/pin_inactive.png",
+    //             s_iconImageHref: "images/pin_inactive.png",
+    //             a_iconImageHref: "images/pin_active.png",
+    //             iconImageSize: [60,80],
+    //             s_iconImageSize: [60,80],
+    //             a_iconImageSize: [60,80],
+    //             balloonOffset: [0,-65],
+    //             iconImageOffset: [-15,-60],
+    //             s_iconImageOffset: [-15,-60],
+    //             a_iconImageOffset: [-15,-65],
+    //             iconShadowImageOffset: [-15,-60],
+    //             hideIconOnBalloonOpen: false
+    //         });
+
+    //     });
+
+    //     var MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div class="cluster-content">$[properties.geoObjects.length]</div>');
+            
+    //     var myClusterer = new ymaps.Clusterer({
+    //         clusterIcons: [{
+    //                 href: "images/stack.png",
+    //                 size: [70, 42],
+    //                 offset: [-35, -21]
+    //             }],
+    //             clusterIconContentLayout: MyIconContentLayout,
+    //             clusterIconImageHref: "images/pin_inactive.png"
+            
+    //     });
+    //     myClusterer.add(myGeoObjects);  
+    //     myMap.geoObjects.add(myClusterer);
+    //     // myMap.geoObjects.add(myGeoObjects);
+
+
+    //     //put all offices for location to the side
+    //     $("#location-offices").html(Mustache.render(officesTemplate, currentLocation));
+    // });    
 };
 
 var selectOffice = function(element) {
@@ -166,11 +212,18 @@ var selectOffice = function(element) {
 
 };
 
+$(document).ready(function() {
 ymaps.ready(function() {
     var data;
     $.getJSON("scripts/offices.json", function(data) {
         // var template = $.get('#locations-template').html(); 
-        offices = data;      
+        offices = data;
+
+        $.get('templates/location-offices.mst', function(template) {
+            officesTemplate = template;
+            var rendered = Mustache.render(template, data);
+            $("#location-offices").html(rendered);
+        });      
 
         $.get('templates/locations.mst', function(template) {
             var rendered = Mustache.render(template, data);
@@ -178,14 +231,11 @@ ymaps.ready(function() {
             changeLocation($('#locations').children()[0]);
         });
 
-        $.get('templates/location-offices.mst', function(template) {
-            officesTemplate = template;
-            var rendered = Mustache.render(template, data);
-            $("#location-offices").html(rendered);
-        });
+        
 
 
     });    
+});
 });
 
 
