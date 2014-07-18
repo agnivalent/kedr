@@ -108,12 +108,12 @@
             </div>
             <div id="errors" class="newfont2" style="display: none;"></div>
             <div class="center">
-                <a href="#offices" style="border: none"><input type="button" id="visit-offices-button" value="Посетить наши офисы"/></a>
+                <a  class="smooth" href="#offices" style="border: none"><input type="button" id="visit-offices-button" value="Посетить наши офисы"/></a>
             </div>
             <div class="right-bottom-corner">
                 <span><img src="images/printer.png" width="26"></span><a href="#" onClick="window.print()">Распечатать результаты</a><br/>
                 <span><img src="images/pdf.png" width="23"></span><div class="link inline" onclick="toggleDepositPopup(0)">Сравнить условия вкладов</div><br/>
-                <span><img src="images/chat.png" style="margin-top: 3px;" width="26"></span><a href="#feedback">Задать вопрос специалисту</a>
+                <span><img src="images/chat.png" style="margin-top: 3px;" width="26"></span><a class="smooth" href="#feedback">Задать вопрос специалисту</a>
             </div>
         </form>
     </section>
@@ -191,8 +191,9 @@
     
 
     <div class="white-background">
+    <a name="offices"></a>
         <section id="offices" class="fullwidth">
-            <a name="offices"></a>
+            
             <h1>Отделения Банка в России и Евросоюзе</h1>
             <!-- <label for="city">Выберете ваш город:</label>
             <form action="/echo" method="post" id="city">
