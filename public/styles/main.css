@@ -652,8 +652,12 @@ header li a {
     padding-top: 20px;
 }
 
+.feedback-form input[type=submit] {
+    margin-right: 15px;
+}
+
 .feedback-form{
-    width: 60%;
+    width: 590px;
     display: inline-table;
     text-align: left;
     font-size: 16px;
