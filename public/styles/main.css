@@ -799,14 +799,15 @@ footer .icon-label {
     float: left;
 }
 .bank-info li{
-    line-height: 70%;
-    color:#64df77;
+    line-height: 80%;
+    color:#009b3a;7;
     font-size: 2em;
 }
 .bank-info li span{ 
     color: black;
     font-size: 0.5em;
     padding-bottom: 10px;
+    vertical-align: top;
 }
 
 #first-col h1{
