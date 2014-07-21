@@ -407,7 +407,7 @@ select {
 }
 #logo img {
     margin-top: 20px;
-    margin-left: -20px;
+    /*margin-left: -20px;*/
     margin-right: 5px;
 }
 
