@@ -1094,12 +1094,13 @@ $(document).ready(function() {
 	});
 	$("#fb_email").val('');
 	$("#free_take").click(function (){
-		if ($(this).is(":checked")){
-			$("#free_add").attr("checked","checked");
-			$(".newl").show();
-			$("#re_flag1").show();
-			rostErrors.flags = 3;
-		}
+		// if ($(this).is(":checked")){
+		// 	$("#free_add").attr("checked","checked");
+		// 	$(".newl").show();
+		// 	$("#re_flag1").show();
+		// 	rostErrors.flags = 3;
+		// }
+		useCalc();
 	});
 	if ($("body").hasClass("ver2")){
 		var cv_stop = false;
