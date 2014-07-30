@@ -604,6 +604,15 @@ header li a {
     float: left;
 }
 
+#calc-caption {
+	font-size:9px; 
+	color:#9C9C9C; 
+	text-align:justify;
+	margin-top:-8px; 
+	line-height:120%;
+	text-justify:inter-word;
+}
+
 #img-insured {
     float: right;
 }

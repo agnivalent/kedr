@@ -64,6 +64,10 @@ var changeLocation = function(element) {
     //set map centered on the location
     setMapForAddress(locationName);
 
+    //special case for that location
+    if (locationName == "Зеленогорск") {
+    setMapForAddress("Зеленогорск Красноярский край");        
+    }
 
     // currentLocation = offices.locations.filter(function(val) {
     //     return val.name === locationName;
