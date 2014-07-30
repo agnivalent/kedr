@@ -260,6 +260,13 @@ header {
     display: block-inline;
 }
 
+.right-bottom-corner p {
+    width: 260px;
+    font-size: 0.7em; 
+    margin: 0 0 15px 5px;
+    color: #9C9C9C; 
+}
+
 .right-bottom-corner a, .right-bottom-corner div {
     vertical-align: top;
     margin: 10px;
