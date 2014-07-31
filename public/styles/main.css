@@ -61,6 +61,24 @@ section {
     min-height: 360px;
 }
 
+
+/* ipad specials */
+#calc_summ {
+    line-height:100%;
+    max-width:170px;
+    min-width:170px;
+    width:170px;
+}
+
+#calc_time {
+line-height:100%;
+    max-width:170px;
+    min-width:170px;
+    width:170px;
+    box-sizing: content-box;
+}
+/* ________ */
+
 #errors {
     margin-left: 40px;
     margin-top: 20px;
