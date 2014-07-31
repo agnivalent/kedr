@@ -505,7 +505,7 @@ header li a {
     padding-bottom: 20px;
     border-radius: 10px;
     text-align: left;
-	min-height: 180px;
+	min-height: 188px;
 	line-height: 20px;
     
 }
@@ -868,6 +868,12 @@ footer .icon-label {
     font-size: 0.5em;
     padding-bottom: 10px;
     vertical-align: top;
+}
+
+.icon {
+
+    position:relative; 
+    bottom:5px;
 }
 
 #first-col h1{
