@@ -1009,6 +1009,10 @@ footer .icon-label {
 
 }
 
+.selected .hand {
+    cursor: default;
+}
+
 .overlay {
     position:fixed;
     display:none; 
