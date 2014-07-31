@@ -124,14 +124,14 @@
             </div>
             <div id="errors" class="newfont2" style="display: none;"></div>
             <div class="center">
-                <a  class="smooth hand not-printable" href="#offices" style="border: none"><input type="button" id="visit-offices-button" onclick="ga('send', 'event', 'Офисы на карте', 'click', 'Перейти'); yaCounter25683584.reachGoal('VISIT_OUROFFICES'); return true;"
+                <a  class="smooth hand not-printable" href="#offices" style="border: none"><input type="button" id="visit-offices-button" onclick="ga('send', 'event', 'Офисы на карте', 'Перейти'); yaCounter25683584.reachGoal('VISIT_OUROFFICES'); return true;"
  value="Посетить наши офисы"/></a>
             </div>
             <div class="right-bottom-corner">
                 <p>Расчет является приблизительным, носит информационный характер и не влечет за собой обязанность Банка выплатить рассчитанную сумму. Точную информацию о сумме дохода по вкладам Вы можете получить в офисе Банка.</p>
-                <span><img class="not-printable" src="images/printer.png" width="26"></span><a href="#" class="not-printable" onClick="window.print(); _gaq.push(['_trackEvent', 'Распечатать результаты', 'Раскрыть',,true]); yaCounter25683584.reachGoal('PRINT_RESULTS'); return true; ">Распечатать результаты</a><br/>
-                <span><img class="not-printable" src="images/pdf.png" width="23"></span><div class="link inline not-printable" onclick="toggleDepositPopup(0); _gaq.push(['_trackEvent', 'Условия вкладов', 'Раскрыть',,true]); yaCounter25683584.reachGoal('COMPARE_CONDITIONS'); return true; ">Сравнить условия вкладов</div><br/>
-                <span><img class="not-printable" src="images/chat.png" style="margin-top: 3px;" width="26"></span><a class="smooth not-printable" onclick="_gaq.push(['_trackEvent', 'Задать вопрос специалисту', 'Раскрыть',,true]);yaCounter25683584.reachGoal('ASK_AQUESTION'); return true;"
+                <span><img class="not-printable" src="images/printer.png" width="26"></span><a href="#" class="not-printable" onClick="window.print(); ga('send', 'event', 'Распечатать результаты', 'Раскрыть'); yaCounter25683584.reachGoal('PRINT_RESULTS'); return true; ">Распечатать результаты</a><br/>
+                <span><img class="not-printable" src="images/pdf.png" width="23"></span><div class="link inline not-printable" onclick="toggleDepositPopup(0); ga('send', 'event', 'Условия вкладов', 'Раскрыть');  yaCounter25683584.reachGoal('COMPARE_CONDITIONS'); return true; ">Сравнить условия вкладов</div><br/>
+                <span><img class="not-printable" src="images/chat.png" style="margin-top: 3px;" width="26"></span><a class="smooth not-printable" onclick="ga('send', 'event', 'Задать вопрос специалисту', 'Раскрыть'); yaCounter25683584.reachGoal('ASK_AQUESTION'); return true;"
  href="#feedback">Задать вопрос специалисту</a>
             </div>
         </form>
@@ -334,7 +334,7 @@
                     <textarea name="message" type="text" id="area-field" value="Ваш вопрос" rows="5"></textarea>
                     <br/>
                     <div class="right">
-                        <input type="submit" id="submit" onclick="_gaq.push(['_trackEvent', 'Задать вопрос специалисту (нижняя форма)', 'Отправить',,true]); yaCounter25683584.reachGoal('SEND_INFO'); return true;" value="Отправить"/>
+                        <input type="submit" id="submit" onclick="ga('send', 'event', 'Задать вопрос специалисту (нижняя форма)', 'Отправить'); yaCounter25683584.reachGoal('SEND_INFO'); return true;" value="Отправить"/>
                     </div>
                 </form>
             </div>
