@@ -318,6 +318,10 @@ label.left-label {
     /*display: inline-block !important;*/
 }
 
+#calculator .ui-selectmenu-button span.ui-selectmenu-text {
+    padding: 4px 3px 2px 10px !important; 
+}
+
 input[type=text], textarea, select{
     border-radius: 5px;
     
