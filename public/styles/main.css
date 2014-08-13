@@ -217,7 +217,7 @@ line-height:100%;
 }
 
 #dep {
-    padding-top: 130px;
+    padding-top: 120px;
     text-align: left;
     height: 150px;    
     background-size: 182px auto;
@@ -228,10 +228,12 @@ line-height:100%;
 #dep h1 {
 margin-left:-3px;
 text-align: left;
+
 }
 
 #dep h3 {
 letter-spacing: .03em;
+margin-top: 6px;
  text-align: left;
 }
 
