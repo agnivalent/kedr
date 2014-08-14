@@ -61,6 +61,24 @@ section {
     min-height: 360px;
 }
 
+
+/* ipad specials */
+#calc_summ {
+    line-height:100%;
+    max-width:170px;
+    min-width:170px;
+    width:170px;
+}
+
+#calc_time {
+line-height:100%;
+    max-width:170px;
+    min-width:170px;
+    width:170px;
+    box-sizing: content-box;
+}
+/* ________ */
+
 #errors {
     margin-left: 40px;
     margin-top: 20px;
@@ -199,7 +217,7 @@ section {
 }
 
 #dep {
-    padding-top: 130px;
+    padding-top: 120px;
     text-align: left;
     height: 150px;    
     background-size: 182px auto;
@@ -210,10 +228,12 @@ section {
 #dep h1 {
 margin-left:-3px;
 text-align: left;
+
 }
 
 #dep h3 {
 letter-spacing: .03em;
+margin-top: 6px;
  text-align: left;
 }
 
@@ -487,7 +507,7 @@ header li a {
     padding-bottom: 20px;
     border-radius: 10px;
     text-align: left;
-	min-height: 180px;
+	min-height: 188px;
 	line-height: 20px;
     
 }
@@ -829,6 +849,15 @@ footer .icon {
     text-align: center;
 }
 
+footer .pmref {
+
+    position:relative; 
+    top:2px;
+    color:#8A8888; 
+    font-size:10px; 
+    border-bottom:none;
+}
+
 footer .icon-label {
     display: inline-block;
     vertical-align: top;
@@ -852,6 +881,12 @@ footer .icon-label {
     vertical-align: top;
 }
 
+.icon {
+
+    position:relative; 
+    bottom:5px;
+}
+
 #first-col h1{
     margin-bottom: 40px;
 }
@@ -859,7 +894,7 @@ footer .icon-label {
     font-size: 2.7em;
 }*/
 #first-col li{
-       margin:20px;
+       margin:10px;
 	   
 }
 #second-col li{
