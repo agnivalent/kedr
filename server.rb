@@ -10,7 +10,7 @@ post '/mailer' do
 # calendar:15.07.2014
 # message:йауц
 
-	message = "#{params[:name]} просит связаться по телефону #{params[:phone]} "
+	message = "#{params[:name]} просит связаться по телефону #{params[:phone]} или email #{params[:email]}"
 		
 	message << ((params[:now].to_s == "true")? "сейчас" : "#{params[:calendar]} в #{params[:time]}")
 	message << "\n"
