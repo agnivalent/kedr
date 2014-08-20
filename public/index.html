@@ -21,6 +21,8 @@
         <script src="scripts/jquery-ui-1.11.0.custom/jquery-ui.min.js" type="text/javascript"></script> 
 
         <script src="scripts/templates.js" type="text/javascript"></script> 
+        <script src="scripts/jquery-validate/jquery.validate.min.js" type="text/javascript"></script> 
+        <script src="scripts/jquery-validate/localization/messages_ru.min.js" type="text/javascript"></script> 
         <script src="scripts/map.js" type="text/javascript"></script> 
         <script src="scripts/tabs.js" type="text/javascript"></script> 
         <script src="scripts/misc.js" type="text/javascript"></script> 
@@ -323,11 +325,12 @@
             <h2>Задайте вопрос специалисту банка</h2>
             <div class="feedback-form block">
                 <form >
+                    <div class="error"></div>
                     <label for="name-field" class="feed-label right-side">Ваше имя</label>
                     <input type="text" name="name" id="name-field"/>
                     <br>
                     <label for="number-field" class="feed-label right-side" value="(495) 123 45 67"><div style="width: 110px;">Телефон</div><!-- <div class="phone-code-label">+7</div>    --></label>
-                    <input type="text" name="phone" value="+7" id="area-field"/><label id="email-label" for="email-field" class="feed-label">E-mail</label><input type="text" name="email" value="" id="email-field"/>
+                    <input type="text" name="phone" value="+7" id="area-field"/><label id="email-label" for="email-field" class="feed-label">E-mail</label><input type="email" name="email" value="" id="email-field"/>
                     <br>
                     <label for="call-field" class="feed-label">Перезвонить</label>
                     <input type="radio" name="now" id="now" value="true" checked/>
