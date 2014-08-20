@@ -4,10 +4,25 @@ $('.feedback-form form').submit(function () {
 
 var value1 = document.getElementById('name-field').value;
 var value2 = document.getElementById('email-field').value;
+
+var x = document.getElementById('email-field').value;
+var atpos = x.indexOf("@");
+var dotpos = x.lastIndexOf(".");
+
+
  if (value1.length < 1 || value2.length < 4) {
  	alert ('Пожалуйста, заполните поля с вашим именем и Email.');
-   return false; // keep form from submitting
+ 	return false;
+    // keep form from submitting
  }
+
+
+
+  else  if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Email должен быть формата **@**.**");
+        return false;
+ }
+
  else {
 
 
