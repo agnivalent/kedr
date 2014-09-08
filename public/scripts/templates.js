@@ -1,13 +1,13 @@
 
-var offices;
+//var offices = $.parseJSON($('#offices').html());
 var currentLocation;
 var officesTemplate;
 // var officeCoords = [];
 // var officesCluster;
 
 var setMapForAddress = function(address) {
-    $.getJSON(geocodingRequestUrl(address), 
-        function(json){ 
+    $.getJSON(geocodingRequestUrl(address),
+        function(json){
             var geoObject = extractFirstGeoObjectFromGeocodeResponse(json);
             myMap.setCenter(extractCoordsFromGeoObject(geoObject));
             myMap.setBounds(extractBoundsFromGeoObject(geoObject));
@@ -23,7 +23,7 @@ var extractCoordsFromGeoObject = function(geoObject) {
 };
 
 var extractBoundsFromGeoObject = function(geoObject) {
-    return [geoObject.boundedBy.Envelope.lowerCorner.split(" ").reverse(), 
+    return [geoObject.boundedBy.Envelope.lowerCorner.split(" ").reverse(),
             geoObject.boundedBy.Envelope.upperCorner.split(" ").reverse()];
 };
 
@@ -44,7 +44,7 @@ var stupidFilter = function(locations, name) {
     var res;
     locations.forEach(function(element, i, a) {
         if(element.name == name) {
-            res = element; 
+            res = element;
 
         }
     });
@@ -55,18 +55,18 @@ var changeLocation = function(element) {
     if (offices == null) {
         setTimeout(changeLocation,1000);
     }
-    
+
     var locationName = $(element).text();
     $('#locations .selected').removeClass('selected');
     $(element).addClass('selected');
     officeCoords = [];
-    
+
     //set map centered on the location
     setMapForAddress(locationName);
 
     //special case for that location
     if (locationName == "Зеленогорск") {
-    setMapForAddress("Зеленогорск Красноярский край");        
+    setMapForAddress("Зеленогорск Красноярский край");
     }
 
     // currentLocation = offices.locations.filter(function(val) {
@@ -121,9 +121,9 @@ var changeLocation = function(element) {
         ajaxes.push(xhr);
     });
 
-    
+
         var MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div class="cluster-content">$[properties.geoObjects.length]</div>');
-            
+
         var myClusterer = new ymaps.Clusterer({
             clusterIcons: [{
                     href: "images/stack.png",
@@ -132,9 +132,9 @@ var changeLocation = function(element) {
                 }],
                 clusterIconContentLayout: MyIconContentLayout,
                 clusterIconImageHref: "images/pin_inactive.png"
-            
+
         });
-        myClusterer.add(myGeoObjects);  
+        myClusterer.add(myGeoObjects);
         myMap.geoObjects.add(myClusterer);
         // myMap.geoObjects.add(myGeoObjects);
 
@@ -165,34 +165,48 @@ var selectOffice = function(element) {
 
 };
 
+ymaps.ready(function() {
+  $.ajax({url: 'templates/location-offices.mst', success: function(template) {
+            officesTemplate = template;
+            var rendered = Mustache.render(template, offices);
+            $("#location-offices").html(rendered);
+        }});
+
+        $.get('templates/locations.mst', function(template) {
+            var rendered = Mustache.render(template, offices);
+            $("#locations").html(rendered);
+            changeLocation($('#locations').children()[0]);
+        });
+});
+
 // var print = function() {
-    
+
 //     return true;
 // };
-
+/*
 $(document).ready(function() {
 ymaps.ready(function() {
     var data;
     $.getJSON("scripts/offices.json", function(data) {
-        // var template = $.get('#locations-template').html(); 
+        // var template = $.get('#locations-template').html();
         offices = data;
 
         $.ajax({url: 'templates/location-offices.mst', async: false, success: function(template) {
             officesTemplate = template;
             var rendered = Mustache.render(template, data);
             $("#location-offices").html(rendered);
-        }});      
+        }});
 
         $.get('templates/locations.mst', function(template) {
             var rendered = Mustache.render(template, data);
             $("#locations").html(rendered);
             changeLocation($('#locations').children()[0]);
-        });    
+        });
 
 
-    });    
+    });
 });
 });
-
+*/
 
 
