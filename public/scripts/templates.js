@@ -122,9 +122,9 @@ var changeLocation = function(element) {
     });
 
 
-        var MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div class="cluster-content">$[properties.geoObjects.length]</div>');
+    var MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div class="cluster-content">$[properties.geoObjects.length]</div>');
 
-        var myClusterer = new ymaps.Clusterer({
+    var myClusterer = new ymaps.Clusterer({
             clusterIcons: [{
                     href: "images/stack.png",
                     size: [70, 42],
